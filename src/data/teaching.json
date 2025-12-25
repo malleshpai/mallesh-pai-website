@@ -1,0 +1,27 @@
+[
+    {
+        "term": "Fall 2017",
+        "courses": [
+            {
+                "code": "Econ 501",
+                "title": "Microeconomics I",
+                "description": "First half of the microeconomic theory sequence required of all Rice Economics PhD students covering traditional consumer theory, producer theory and general equilibrium."
+            },
+            {
+                "code": "Econ 470",
+                "title": "Market Design",
+                "description": "Upper level undergraduate elective targeted at economics major. It studies the design and use of market-based mechanisms to solve problems of economic resource allocation."
+            }
+        ]
+    },
+    {
+        "term": "Spring 2018",
+        "courses": [
+            {
+                "code": "Econ 508",
+                "title": "Microeconomics II",
+                "description": "Second half of the microeconomic theory sequence required of all Rice Economics PhD students covering game theory, information economics and mechanism design. Co-taught with Hulya Eraslan."
+            }
+        ]
+    }
+]

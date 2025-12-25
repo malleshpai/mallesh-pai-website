@@ -1,65 +1,86 @@
-import Image from "next/image";
+import Image from 'next/image';
+import Link from 'next/link';
+import { Mail, GraduationCap, Twitter, Linkedin } from 'lucide-react';
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="max-w-3xl mx-auto space-y-10 py-8">
+      <section className="flex flex-col md:flex-row gap-10 items-start">
+        <div className="relative shrink-0">
+          <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden shadow-xl border-2 border-white ring-1 ring-slate-100 relative">
+            <Image
+              src="/profile.jpg"
+              alt="Mallesh M. Pai"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          {/* Decorative element */}
+          <div className="absolute -z-10 top-4 -right-4 w-32 h-32 bg-[var(--color-nw-purple-light)]/20 rounded-full blur-2xl"></div>
+        </div>
+
+        <div className="space-y-6 pt-2 flex-grow">
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-[var(--color-nw-purple)] tracking-tight">
+            Mallesh M. Pai
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <div className="text-[1.1rem] text-slate-600 font-light leading-loose">
+            <p className="mb-4">
+              I am a researcher at <a href="https://tempo.xyz/" className="text-slate-800 hover:text-[var(--color-nw-purple)] transition-colors underline decoration-1 underline-offset-4 decoration-slate-300 hover:decoration-[var(--color-nw-purple)]">Tempo Labs</a>.
+            </p>
+            <p className="mb-4">
+              I am also the Lay Family Professor in the <a href="http://economics.rice.edu" className="text-slate-800 hover:text-[var(--color-nw-purple)] transition-colors underline decoration-1 underline-offset-4 decoration-slate-300 hover:decoration-[var(--color-nw-purple)]">Department of Economics</a> at <a href="http://www.rice.edu" className="text-slate-800 hover:text-[var(--color-nw-purple)] transition-colors underline decoration-1 underline-offset-4 decoration-slate-300 hover:decoration-[var(--color-nw-purple)]">Rice University</a> (on leave), and a <a href="https://cepr.org/" className="text-slate-800 hover:text-[var(--color-nw-purple)] transition-colors underline decoration-1 underline-offset-4 decoration-slate-300 hover:decoration-[var(--color-nw-purple)]">CEPR</a> Research Fellow.
+            </p>
+          </div>
+        </div>
+
+        {/* Social Sidebar */}
+        <div className="flex flex-row md:flex-col gap-4 mt-2 pt-2 md:border-l md:border-slate-100 md:pl-6 shrink-0">
+          <a href="mailto:mallesh.pai@gmail.com" className="group flex items-center space-x-3 text-slate-400 hover:text-[var(--color-nw-purple)] transition-colors" title="Email">
+            <span className="p-2 bg-slate-50 group-hover:bg-purple-50 rounded-full transition-colors">
+              <Mail size={20} />
+            </span>
+            <span className="hidden md:inline text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity -ml-2 group-hover:ml-0">Email</span>
+          </a>
+          <a href="https://scholar.google.com/citations?user=dHU6M_4AAAAJ" target="_blank" rel="noopener noreferrer" className="group flex items-center space-x-3 text-slate-400 hover:text-[var(--color-nw-purple)] transition-colors" title="Google Scholar">
+            <span className="p-2 bg-slate-50 group-hover:bg-purple-50 rounded-full transition-colors">
+              <GraduationCap size={20} />
+            </span>
+            <span className="hidden md:inline text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity -ml-2 group-hover:ml-0">Scholar</span>
+          </a>
+          <a href="https://twitter.com/malleshpai" target="_blank" rel="noopener noreferrer" className="group flex items-center space-x-3 text-slate-400 hover:text-[var(--color-nw-purple)] transition-colors" title="Twitter">
+            <span className="p-2 bg-slate-50 group-hover:bg-purple-50 rounded-full transition-colors">
+              <Twitter size={20} />
+            </span>
+            <span className="hidden md:inline text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity -ml-2 group-hover:ml-0">Twitter</span>
+          </a>
+          <a href="https://www.linkedin.com/in/malleshpai" target="_blank" rel="noopener noreferrer" className="group flex items-center space-x-3 text-slate-400 hover:text-[var(--color-nw-purple)] transition-colors" title="LinkedIn">
+            <span className="p-2 bg-slate-50 group-hover:bg-purple-50 rounded-full transition-colors">
+              <Linkedin size={20} />
+            </span>
+            <span className="hidden md:inline text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity -ml-2 group-hover:ml-0">LinkedIn</span>
+          </a>
+        </div>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-serif font-semibold text-[var(--color-nw-purple)]">Research Interests</h2>
+        <p className="text-slate-700 leading-relaxed">
+          My research focuses on mechanism design and auction theory, and their applications to the design of blockchains and decentralized finance (DeFi) protocols. I have also worked on the economics of privacy, social networks, social learning, and statistical decision theory.
+        </p>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-serif font-semibold text-[var(--color-nw-purple)]">Background</h2>
+        <div className="text-slate-700 leading-relaxed space-y-4">
+          <p>
+            Prior to joining Rice, I was a Janice and Julian Bers Assistant Professor in the Department of Economics at the University of Pennsylvania.
+          </p>
+          <p>
+            I hold a PhD in Managerial Economics and Strategy from the <a href="http://www.kellogg.northwestern.edu/" className="hover:text-[var(--color-nw-purple)]">Kellogg School of Management</a>, Northwestern University, and a Bachelor's degree in Computer Science and Engineering from the <a href="http://www.iitd.ernet.in" className="hover:text-[var(--color-nw-purple)]">Indian Institute of Technology, Delhi</a>.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </section>
     </div>
   );
 }

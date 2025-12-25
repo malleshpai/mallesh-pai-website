@@ -1,0 +1,887 @@
+[
+  {
+    "category": "Working Papers",
+    "papers": [
+      {
+        "title": "Dynamic Incentives for Buy-Side Analysts",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3310080",
+        "status": "Working Paper",
+        "authors": [
+          {
+            "name": "Rahul Deb",
+            "url": "https://www.economics.utoronto.ca/debrahul/"
+          },
+          {
+            "name": "Maher Said",
+            "url": "http://www.mahersaid.com"
+          }
+        ],
+        "links": [],
+        "abstract": "We develop a dynamic adverse selection model where a career-concerned buy-side analyst advises a fund manager about investment decisions. The analyst's ability is privately known, as is any information she learns over time. The manager wants to elicit information to maximize fund performance while also identifying and retaining high-skill analysts. We characterize the optimal dynamic contract, show that it has several features supported by empirical evidence, and derive novel testable implications. The fund manager's optimal contract both maximizes the value of information and screens out low-skill analysts by incentivizing the analyst to always provide honest advice."
+      },
+      {
+        "title": "How Informed Do You Want Your Principal To Be?",
+        "url": "https://www.economics.utoronto.ca/debrahul/files/InformedPrincipal.pdf",
+        "status": "(new)",
+        "authors": [
+          {
+            "name": "Rahul Deb",
+            "url": "https://www.economics.utoronto.ca/debrahul/"
+          },
+          {
+            "name": "Anne-Katrin Roesler",
+            "url": "https://sites.google.com/site/akroesler/"
+          }
+        ],
+        "links": [],
+        "abstract": "We study a bilateral trade setting with interdependent values and two-sided private information. A buyer's value for a good depends on their private type and an unobserved quality of the good. The seller's cost similarly depends on both the buyer's type and the good's quality, which the seller learns about through a private signal. The core question is: how much (if any) private information would the buyer want the seller to have? We characterize the buyer-optimal outcome and demonstrate that there are conditions under which private information for the seller can lead to both greater profits and higher consumer surplus, suggesting that seller private information can result in Pareto gains compared to a situation where the seller is uninformed."
+      },
+      {
+        "title": "Dynamic Transaction Fee Mechanism Design",
+        "url": "https://arxiv.org/abs/2301.13406",
+        "status": "(new)",
+        "authors": [
+          {
+            "name": "Max Resnick",
+            "url": "https://www.linkedin.com/in/max-resnick"
+          }
+        ],
+        "links": [],
+        "abstract": ""
+      },
+      {
+        "title": "An Analysis of Intent-Based Markets",
+        "url": "https://arxiv.org/abs/2403.02525",
+        "status": "(new)",
+        "authors": [
+          {
+            "name": "Tarun Chitra",
+            "url": null
+          },
+          {
+            "name": "Theo Diamandis",
+            "url": null
+          },
+          {
+            "name": "Kshitij Kulkarni",
+            "url": null
+          }
+        ],
+        "links": [],
+        "abstract": "Mechanisms for decentralized finance on blockchains suffer from various problems, including suboptimal price execution for users, latency, and a worse user experience compared to their centralized counterparts. Recently, off-chain marketplaces, colloquially called `intent markets,' have been proposed as a solution to these problems. In these markets, agents called solvers compete to satisfy user orders, which may include complicated user-specified conditions. We provide two formal models of solvers' strategic behavior: one probabilistic and another deterministic. In our first model, solvers initially pay upfront costs to enter a Dutch auction to fill the user's order and then exert congestive, costly effort to search for prices for the user. Our results show that the costs incurred by solvers result in restricted entry in the market. Further, in the presence of costly effort and congestion, our results counter-intuitively show that a planner who aims to maximize user welfare may actually prefer to restrict entry, resulting in limited oligopoly. We then introduce an alternative, optimization-based deterministic model which corroborates these results. We conclude with extensions of our model to other auctions within blockchains and non-cryptocurrency applications, such as the US SEC's Proposal 615."
+      },
+      {
+        "title": "Does Your Blockchain Need Multidimensional Transaction Fees?",
+        "url": "https://arxiv.org/abs/2504.15438",
+        "status": "(new)",
+        "authors": [
+          {
+            "name": "Nir Lavee",
+            "url": null
+          },
+          {
+            "name": "Noam Nisan",
+            "url": null
+          },
+          {
+            "name": "Max Resnick",
+            "url": "https://www.linkedin.com/in/max-resnick"
+          }
+        ],
+        "links": [],
+        "abstract": "Blockchains have block-size limits to ensure the entire cluster can keep up with the tip of the chain. These block-size limits are usually single-dimensional, but richer multidimensional constraints allow for greater throughput. We introduce the concept of an \u03b1-approximation and show that the optimal single-dimensional gas measure corresponds to the value of a specific zero-sum game. However, the more general problem of finding the optimal k-dimensional approximation is NP-complete."
+      },
+      {
+        "title": "Latency Advantages in Common-Value Auctions",
+        "url": "https://arxiv.org/abs/2504.02077",
+        "status": "(new)",
+        "authors": [
+          {
+            "name": "Ciamac C. Moallemi",
+            "url": null
+          },
+          {
+            "name": "Dan Robinson",
+            "url": null
+          }
+        ],
+        "links": [],
+        "abstract": "In financial applications, latency advantages - the ability to make decisions later than others - can provide individual participants with an edge by allowing them to gather additional relevant information. We consider a common-value auction with a reserve price in which some bidders may have more information about the value of the item than others. We provide a characterization of the equilibrium strategies and study the welfare and auctioneer revenue implications of the last-mover advantage."
+      }
+    ]
+  },
+  {
+    "category": "Papers in Refereed Journals",
+    "papers": [
+      {
+        "title": "Indirect Persuasion",
+        "url": "https://doi.org/10.1086/739332",
+        "status": "Journal of Political Economy, Forthcoming (Accepted 2025).",
+        "authors": [
+          {
+            "name": "Rahul Deb",
+            "url": "https://www.economics.utoronto.ca/debrahul/"
+          },
+          {
+            "name": "Maher Said",
+            "url": "http://www.mahersaid.com"
+          }
+        ],
+        "links": [],
+        "abstract": "We study a scenario where an uninformed principal faces a dual challenge: screening agents and persuading a receiver. The principal aims to influence the receiver's beliefs about a payoff-relevant state using information from a privately informed agent. A key constraint is that the principal cannot act as an intermediary to optimally garble the agent's private communications; instead, the agent's messages are publicly observed by the receiver. Despite this limitation, we demonstrate that the principal can still indirectly implement the optimal unconstrained intermediation scheme through commitment to an employment contract with the agent. We apply these findings to a brokerage firm contracting with a sell-side analyst, showing that a public communication scheme similar to common investment ratings can circumvent conflict-of-interest regulations."
+      },
+      {
+        "title": "Strategy Investments in Matrix Games",
+        "url": "https://optimization-online.org/2023/10/strategy-investments-in-matrix-games/",
+        "status": "Optimization Letters, 2023.",
+        "authors": [
+          {
+            "name": "Raul Garcia",
+            "url": null
+          },
+          {
+            "name": "Seyedmohammadhossein Hosseinian",
+            "url": null
+          },
+          {
+            "name": "Andrew J. Schaefer",
+            "url": null
+          }
+        ],
+        "links": [],
+        "abstract": "We propose an extension of matrix games where the row player may select rows and remove columns, subject to a budget constraint. We present an exact mixed-integer linear programming (MILP) formulation for the problem, provide analytical results concerning its solution, and discuss applications in the security domain. Our computational experiments show heuristic approaches on average obtain suboptimal solutions with at least a 20% relative gap with those obtained by our MILP formulation."
+      },
+      {
+        "title": "(Bad) Reputation in Relational Contracting",
+        "url": "https://doi.org/10.3982/TE4803",
+        "status": "Theoretical Economics, 2022, 17, 763\u2013800 .",
+        "authors": [
+          {
+            "name": "Rahul Deb",
+            "url": "https://www.economics.utoronto.ca/debrahul/"
+          },
+          {
+            "name": "Matt Mitchell",
+            "url": "https://matthewmitchelltoronto.weebly.com/"
+          }
+        ],
+        "links": [],
+        "abstract": "Motivated by markets for \"expertise,\" we study a bandit model where a principal chooses between a safe and risky arm. A strategic agent controls the risky arm and privately knows whether its type is high or low. Irrespective of type, the agent wants to maximize duration of experimentation with the risky arm. However, only the high type arm can generate value for the principal. Our main insight is that reputational incentives can be exceedingly strong unless both players coordinate on maximally inefficient strategies on path. We discuss implications for online content markets, term limits for politicians and experts in organizations."
+      },
+      {
+        "title": "Continuous Implementation with Direct Revelation Mechanisms",
+        "url": "https://doi.org/10.1016/j.jet.2022.105422",
+        "status": "Journal of Economic Theory, Volume 201, April 2022, 105422.",
+        "authors": [
+          {
+            "name": "Yi-Chun Chen",
+            "url": "http://yichun.weebly.com/"
+          },
+          {
+            "name": "Manuel Mueller-Frank",
+            "url": "https://sites.google.com/site/muellerfrankmanuel/"
+          }
+        ],
+        "links": [],
+        "abstract": "We investigate how a principal's knowledge of agents' higher-order beliefs impacts his ability to robustly implement a given social choice function. We adapt a formulation of Oury and Tercieux (2012): a social choice function is continuously implementable if it is partially implementable for types in an initial model and ``nearby'' types. We characterize when a social choice function is truthfully continuously implementable, i.e., using game forms corresponding to direct revelation mechanisms for the initial model. Our characterization hinges on how our formalization of the notion of nearby preserves agents' higher order beliefs. If nearby types have similar higher order beliefs, truthful continuous implementation is roughly equivalent to requiring that the social choice function is implementable in strict equilibrium in the initial model, a very permissive solution concept. If they do not, then our notion is equivalent to requiring that the social choice function is implementable in unique rationalizable strategies in the initial model. If only ordinal preferences are common knowledge among agents, a mild richness condition implies that the social choice function must be dictatorial. Truthful continuous implementation is thus impossible without non-trivial knowledge of agents' higher order beliefs. We further show that without such knowledge, a revelation principle does not apply: the set of social choice functions which can be continuously implemented is strictly larger."
+      },
+      {
+        "title": "Competing Models",
+        "url": "https://doi.org/10.1093/qje/qjac015",
+        "status": "Quarterly Journal of Economics, Nov 2022, 137(4), November 2022, Pages 2419\u20132457.",
+        "authors": [
+          {
+            "name": "Jose Luis Montiel Olea",
+            "url": "http://www.joseluismontielolea.com/"
+          },
+          {
+            "name": "Pietro Ortoleva",
+            "url": "http://ortoleva.mycpanel.princeton.edu/"
+          },
+          {
+            "name": "Andrea Prat",
+            "url": "http://www.columbia.edu/~ap3116/"
+          }
+        ],
+        "links": [
+          {
+            "text": "http://arxiv.org/abs/1907.03809",
+            "url": "http://arxiv.org/abs/1907.03809"
+          }
+        ],
+        "abstract": "Different agents compete to predict a variable of interest related to a set of covariates via an unknown data generating process. All agents are Bayesian, but may consider different subsets of covariates to make their prediction. After observing a common dataset, who has the highest confidence in her predictive ability? We characterize it and show that it crucially depends on the size of the dataset. With small data, typically it is an agent using a model that is `small-dimensional,' in the sense of considering fewer covariates than the true data generating process. With big data, it is instead typically `large-dimensional,' possibly using more variables than the true model. These features are reminiscent of model selection techniques used in statistics and machine learning. However, here model selection does not emerge normatively, but positively as the outcome of competition between standard Bayesian decision makers. The theory is applied to auctions of assets where bidders observe the same information but hold different priors."
+      },
+      {
+        "title": "Testing Alone is Insufficient",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3593974",
+        "status": "Review of Economic Design, March 2022; 26(1): 1\u201321.",
+        "authors": [
+          {
+            "name": "Rahul Deb",
+            "url": "https://www.economics.utoronto.ca/debrahul/"
+          },
+          {
+            "name": "Akhil Vohra",
+            "url": "https://sites.google.com/view/akhilvohra/home"
+          },
+          {
+            "name": "Rakesh Vohra",
+            "url": "https://sites.google.com/site/quaerereverum9/"
+          }
+        ],
+        "links": [],
+        "abstract": "The fear of contracting a serious illness continues to limit economic activity even after reopening. We argue that widespread testing alone is not sufficient to alleviate this problem. Instead, targeted testing in conjunction with targeted transfers is essential. We introduce a model to determine who should be tested and how they should be incentivized. Agents with a low wage, high risk of infection, and significant cost of illness should be tested at work. When testing is very costly, agents with high wages and low expected costs of illness should be tested at home. Simply rewarding individuals for getting tested is insufficient; the approach must also shape behavior by compensating the infected for staying home and incentivizing the uninfected to go out."
+      },
+      {
+        "title": "Algorithmic Collusion: Supra-competitive prices via independent algorithms",
+        "url": "https://cepr.org/active/publications/discussion_papers/dp.php?dpno=14372",
+        "status": "Marketing Science, 40(1), January 2021, 1-12",
+        "authors": [
+          {
+            "name": "Karsten Hansen",
+            "url": "https://rady.ucsd.edu/people/faculty/hansen/"
+          },
+          {
+            "name": "Kanishka Misra",
+            "url": "https://sites.google.com/view/kmisra"
+          }
+        ],
+        "links": [],
+        "abstract": "We investigate the outcomes when competing sellers utilize independent machine learning algorithms for dynamic price experimentation. These algorithms are frequently misspecified, overlooking external factors such as competitors' pricing. The long-term prices resulting from these algorithms are contingent on the informational value (signal-to-noise ratio) of the price experiments. If this value is low, long-run prices align with the static Nash equilibrium. However, if the informational value is high, prices become supra-competitive, potentially reaching the full information joint-monopoly outcome. This supra-competitive pricing occurs because competitors' algorithms end up conducting correlated experiments, causing sellers' misspecified models to overestimate their own price sensitivity.",
+        "award": "Winner of Best Pricing Paper, American Marketing Association RAPSIG 2023"
+      },
+      {
+        "title": "Evaluating Strategic Forecasters",
+        "url": "https://doi.org/10.1257/aer.20170299",
+        "status": "American Economic Review, 108(10), October 2018, 3057-3103.",
+        "authors": [
+          {
+            "name": "Rahul Deb",
+            "url": "https://www.economics.utoronto.ca/debrahul/"
+          },
+          {
+            "name": "Maher Said",
+            "url": "http://www.mahersaid.com"
+          }
+        ],
+        "links": [],
+        "abstract": "Motivated by the question of how one should evaluate professional election forecasters, we study a novel dynamic mechanism design problem without transfers. A principal who wishes to hire only high quality forecasters is faced with an agent of unknown quality. The agent privately observes signals about a publicly observable future event, and may strategically misrepresent information to inflate the principal's perception of his quality. We show that the optimal deterministic mechanism is simple and easy to implement in practice: it evaluates a single, optimally timed prediction. We study the generality of this result and its robustness to randomization and noncommitment."
+      },
+      {
+        "title": "Mental Health Stigma",
+        "url": "https://doi.org/10.1016/j.econlet.2017.06.028",
+        "status": "Economics Letters, 159, October 2017, 57-60.",
+        "authors": [
+          {
+            "name": "Prashant Bharadwaj",
+            "url": "https://prbharadwaj.wordpress.com/"
+          },
+          {
+            "name": "Agne Suziedelyte",
+            "url": "https://sites.google.com/site/agnesuziedelyte/"
+          }
+        ],
+        "links": [],
+        "abstract": "Comparing self-reports to administrative data records on diagnosis and prescription drug use, we find that survey respondents under-report mental health conditions 36% of the time when asked about diagnosis and about 20% of the time when asked about prescription drug use. Survey respondents are significantly less likely to under-report other conditions such as diabetes or hypertension. This behavior is consistent with a model in which mental health illnesses are stigmatized and agents have incentives to hide such traits from others. We show that differential under-reporting of depression is correlated with age, gender, and ethnicity and that these characteristics also predict a lower probability of mental health treatment, suggesting that stigma can play an important role in determining health-seeking behavior."
+      },
+      {
+        "title": "Discrimination via Symmetric Auctions",
+        "url": "https://doi.org/10.1257/mic.20150121",
+        "status": "American Economic Journal: Microeconomics, 9(1), February 2017, 275-314",
+        "authors": [
+          {
+            "name": "Rahul Deb",
+            "url": "http://www.economics.utoronto.ca/debrahul/"
+          }
+        ],
+        "links": [
+          {
+            "text": "Link to published version (gated).",
+            "url": "https://www.aeaweb.org/articles?id=10.1257/mic.20150121"
+          }
+        ],
+        "abstract": "Discrimination (for instance, along the lines of race or gender) is often prohibited in auctions. This is legally enforced by preventing the seller from explicitly biasing the rules in favor of bidders from certain groups (for example, by subsidizing their bids). In this paper, we study the efficacy of this policy in the context of a single object, independent private value setting with heterogeneous bidders. We show that restricting the seller to a using an anonymous, sealed bid auction format (or, simply, a symmetric auction) imposes virtually no restriction on her ability to discriminate. Our results highlight that the discrepancy between the superficial impartiality of the auction rules and the resulting fairness of the outcome can be extreme.",
+        "award": "Best Paper, AEA American Economic Journal: Microeconomics, 2021"
+      },
+      {
+        "title": "An Anti-Folk Theorem for Large Repeated Games with Imperfect Monitoring",
+        "url": "https://arxiv.org/abs/1402.2801",
+        "status": "ACM Transactions in Economics and Computation (TEAC), 5(2), October 2016.",
+        "authors": [
+          {
+            "name": "Aaron Roth",
+            "url": "http://www.cis.upenn.edu/~aaroth/"
+          },
+          {
+            "name": "Jon Ullman",
+            "url": "http://people.seas.harvard.edu/~jullman/"
+          }
+        ],
+        "links": [
+          {
+            "text": "here",
+            "url": "http://arxiv.org/abs/1402.2801"
+          }
+        ],
+        "abstract": "Joint work with Aaron Roth and Jonathan Ullman) We study infinitely repeated games in settings of imperfect monitoring. We first prove a family of theorems that show that when the signals observed by the players satisfy a condition known as (\u03f5,\u03b3)-differential privacy, that the folk theorem has little bite: for values of \u03f5 and \u03b3 sufficiently small, for a fixed discount factor, any equilibrium of the repeated game involve players playing approximate equilibria of the stage game in every period. Next, we argue that in large games (n player games in which unilateral deviations by single players have only a small impact on the utility of other players), many monitoring settings naturally lead to signals that satisfy (\u03f5,\u03b3)-differential privacy, for \u03f5 and \u03b3 tending to zero as the number of players n grows large. We conclude that in such settings, the set of equilibria of the repeated game collapse to the set of equilibria of the stage game."
+      },
+      {
+        "title": "Social Learning with Costly Search",
+        "url": "https://doi.org/10.1257/mic.20130253",
+        "status": "American Economic Journal: Microeconomics, 8(1), February 2016, 83-109.",
+        "authors": [
+          {
+            "name": "Manuel Mueller-Frank",
+            "url": "https://sites.google.com/site/muellerfrankmanuel/"
+          }
+        ],
+        "links": [
+          {
+            "text": "Link to Published Version",
+            "url": "https://www.aeaweb.org/articles?id=10.1257/mic.20130253"
+          }
+        ],
+        "abstract": "Social Learning via Costly Search(Joint with Manuel Mueller-Frank) We study a sequential social learning model where agents privately acquire information by costly search. Search costs of agents are private, and are independently and identically distributed. We show that asymptotic learning occurs if and only if search costs are not bounded away from zero. We explicitly characterize equilibria for the case of two actions, and show that the probability of late moving agents taking the suboptimal action vanishes at a linear rate. Social welfare converges to the social optimum as the discount rate converges to one if and only if search costs are not bounded away from zero."
+      },
+      {
+        "title": "The Geometry of Revealed Preference",
+        "url": "https://doi.org/10.1016/j.jmateco.2013.11.006",
+        "status": "Journal of Mathematical Economics, 50, January 2014, 203-207.",
+        "authors": [
+          {
+            "name": "Rahul Deb",
+            "url": "http://www.economics.utoronto.ca/debrahul/"
+          }
+        ],
+        "links": [
+          {
+            "text": "Published Version",
+            "url": "http://dx.doi.org/10.1016/j.jmateco.2013.11.005"
+          }
+        ],
+        "abstract": "In this paper, we examine how the geometry underlying revealed preference affects the set of preferences that can be revealed by choices. Specifically, given an arbitrary preference relation defined on a finite set of points, we ask whether there exists a data set which can generate the given relation through revealed preference. We first show that there exist data sets which can generate preference relations exhibiting severe irrationality- every choice is revealed preferred to every other. We then prove that the number of goods in the consumption space under study affects the set of revealed preference relations. We show that if the consumption space has enough goods relative to observations, any revealed preference relation could arise. Conversely, if the consumption space has low dimension relative to the number of observations, then there exist preference relations that could never be revealed by choices."
+      },
+      {
+        "title": "Optimal Auctions with Financially Constrained Bidders",
+        "url": "https://doi.org/10.1016/j.jet.2013.09.015",
+        "status": "Journal of Economic Theory, 150, March 2014, 383-425.",
+        "authors": [
+          {
+            "name": "Rakesh Vohra",
+            "url": "https://sites.google.com/site/quaerereverum9/"
+          }
+        ],
+        "links": [],
+        "abstract": "Optimal Auctions with Financially Constrained Buyers(Joint With Rakesh Vohra) We consider an environment where potential buyers for a unique indivisible good have liquidity constraints, in that they cannot pay more than their `budget' regardless of their valuation. A buyer's valuation for the good as well as her budget are her private information. We propose constrained-efficient and revenue maximizing auctions for this setting. In general, the optimal auction requires `pooling' in the middle despite the maintained assumption of a monotone hazard rate. Further, the auctioneer will never find it desirable to subsidize bidders with low budgets."
+      },
+      {
+        "title": "Coarse Decision Making and Overfitting",
+        "url": "https://doi.org/10.1016/j.jet.2013.12.003",
+        "status": "Journal of Economic Theory, 150, March 2014, 467-486.",
+        "authors": [
+          {
+            "name": "Nabil Al-Najjar",
+            "url": "http://www.kellogg.northwestern.edu/faculty/alnajjar/htm/index.html"
+          }
+        ],
+        "links": [],
+        "abstract": "We study decision makers who willingly forgo decision rules that vary finely with available information, even though these decision rules are technologically feasible. We model this behavior as a consequence of using classical, frequentist methods to draw robust inferences from data. Coarse decision making then arises to mitigate the problem of over-fitting the data. The resulting behavior tends to be biased towards simplicity: decision makers choose models that are statistically simple, in a sense we make precise. In contrast to existing approaches, the key determinant of the level of coarsening is the amount of data available to the decision maker. The decision maker may choose a coarser decision rule as the stakes increase."
+      },
+      {
+        "title": "Optimal Dynamic Auctions and Simple Index Rules",
+        "url": "https://doi.org/10.1287/moor.2013.0595",
+        "status": "Mathematics of Operations Research, 38(4), November 2013, 682-697.",
+        "authors": [
+          {
+            "name": "Rakesh Vohra",
+            "url": "https://sites.google.com/site/quaerereverum9/"
+          }
+        ],
+        "links": [
+          {
+            "text": "Link to MOR version.",
+            "url": "http://mor.journal.informs.org/content/early/2013/05/06/moor.2013.0595.abstract"
+          }
+        ],
+        "abstract": "A monopolist seller has multiple units of an indivisible good to sell over a discrete, finite time horizon. Buyers with unit demand arrive over time and each buyer privately knows her arrival time, her value for a unit and her deadline. We study whether the seller's optimal allocation rule is a simple index rule. Each buyer is assigned an index and the allocation rule is calculated by a dynamic knapsack algorithm using those indices. \"Simple'' indicates that the index of a buyer depends only on \"local'' information, i.e., the distribution information for that time period. If buyer deadlines are public, such simple index rules are optimal if the standard increasing hazard rate condition on the distribution of valuations holds, and, given two buyers with the same deadline, the later-arriving one has a lower hazard rate (implying stochastically higher valuations). When buyer deadlines are private, this condition is neither sufficient nor necessary. If the rule we identify is not feasible, then the optimal allocation rule is not a simple index rule and cannot be calculated by backward induction."
+      }
+    ]
+  },
+  {
+    "category": "Papers in Refereed Conference Proceedings",
+    "papers": [
+      {
+        "title": "Measuring CEX-DEX Extracted Value and Searcher Profitability: The Darkest of the MEV Dark Forest",
+        "url": "https://arxiv.org/abs/2507.13023",
+        "status": "Advances in Financial Technologies (AFT), 2025.",
+        "authors": [
+          {
+            "name": "Fei Wu",
+            "url": null
+          },
+          {
+            "name": "Danning Sui",
+            "url": null
+          },
+          {
+            "name": "Thomas Thiery",
+            "url": null
+          }
+        ],
+        "links": [],
+        "abstract": "This paper provides a comprehensive empirical analysis of the economics and dynamics behind arbitrages between centralized and decentralized exchanges (CEX-DEX) on Ethereum. We refine heuristics to identify arbitrage transactions from on-chain data and introduce a robust empirical framework to estimate arbitrage revenue without knowing traders' actual behaviors on CEX. Leveraging an extensive dataset spanning 19 months from August 2023 to March 2025, we estimate a total of 233.8M USD extracted by 19 major CEX-DEX searchers from 7,203,560 identified CEX-DEX arbitrages. Our analysis reveals increasing centralization trends as three searchers captured three-quarters of both volume and extracted value."
+      },
+      {
+        "title": "Optimizing Exit Queues for Proof-of-Stake Blockchains: A Mechanism Design Approach",
+        "url": "https://arxiv.org/abs/2406.05124",
+        "status": "Advances in Financial Technologies (AFT), 2024.",
+        "authors": [
+          {
+            "name": "Michael Neuder",
+            "url": null
+          },
+          {
+            "name": "Max Resnick",
+            "url": "https://www.linkedin.com/in/max-resnick"
+          }
+        ],
+        "links": [],
+        "abstract": "Byzantine fault-tolerant consensus protocols have provable safety and liveness properties for static validator sets. In practice, however, the validator set changes over time, potentially eroding the protocol's security guarantees. This paper provides the first systematic study of exit queues for Proof-of-Stake blockchains. Given a collection of validator-set consistency constraints imposed by the protocol, the social planner's goal is to provide a constrained-optimal mechanism that minimizes disutility for the participants. We introduce the MINSLACK mechanism, a dynamic capacity first-come-first-served queue in which the amount of stake that can exit in a period depends on the number of previous exits and the consistency constraints."
+      },
+      {
+        "title": "Strategic Advantages for Integrated Builders in MEV-Boost",
+        "url": "https://arxiv.org/abs/2311.09083",
+        "status": "DeFi Workshop at FC 24",
+        "authors": [
+          {
+            "name": "Max Resnick",
+            "url": "https://www.linkedin.com/in/max-resnick"
+          }
+        ],
+        "links": [],
+        "abstract": ""
+      },
+      {
+        "title": "The Centralizing Effects of Private Order Flow on Proposer-Builder Separation",
+        "url": "https://arxiv.org/abs/2305.19150",
+        "status": "AFT 23.",
+        "authors": [
+          {
+            "name": "Tivas Gupta",
+            "url": null
+          },
+          {
+            "name": "Max Resnick",
+            "url": null
+          }
+        ],
+        "links": [],
+        "abstract": ""
+      },
+      {
+        "title": "Censorship Resistance in On-Chain Auctions",
+        "url": "https://arxiv.org/abs/2301.13321",
+        "status": "AFT 23.",
+        "authors": [
+          {
+            "name": "Max Resnick",
+            "url": "https://www.linkedin.com/in/max-resnick \u00ae\ufe0f [Elijah Fox](https://www.linkedin.com/in/elijah-fox-765a07174"
+          }
+        ],
+        "links": [],
+        "abstract": ""
+      },
+      {
+        "title": "The Wisdom of the Crowd and Higher-Order Beliefs",
+        "url": "https://arxiv.org/abs/2102.02666",
+        "status": "EC 2023.",
+        "authors": [
+          {
+            "name": "Yi-Chun Chen",
+            "url": "http://yichun.weebly.com/"
+          },
+          {
+            "name": "Manuel Mueller-Frank",
+            "url": "https://sites.google.com/site/muellerfrankmanuel/"
+          }
+        ],
+        "links": [
+          {
+            "text": "Link to Working Paper at Arxiv",
+            "url": "https://arxiv.org/abs/2102.02666"
+          }
+        ],
+        "abstract": "The classic wisdom-of-the-crowd problem asks how a principal can \"aggregate\" information about the unknown state of the world from agents without understanding the information structure among them. We propose a new simple procedure \"population mean based aggregation\" to achieve this goal. It only requires eliciting agents' beliefs about the state, and also eliciting some agents' expectations of the average belief in the population. We show that this procedure fully aggregates information: in an infinite population, it always infers the true state of the world. The procedure can accommodate correlation in agents' information, misspecified beliefs, any finite number of possible states of the world, and only requires very weak assumptions on the information structure."
+      },
+      {
+        "title": "Taxing Externalities without Hurting the Poor",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4180522",
+        "status": "EC 2023.",
+        "authors": [
+          {
+            "name": "Philipp Strack",
+            "url": "https://www.philippstrack.com/"
+          }
+        ],
+        "links": [],
+        "abstract": ""
+      },
+      {
+        "title": "Online Multiobjective Minimax Optimization and Applications",
+        "url": "https://arxiv.org/abs/2108.03837",
+        "status": "NeurIPS 2022.",
+        "authors": [
+          {
+            "name": "Daniel Lee",
+            "url": null
+          },
+          {
+            "name": "Georgy Noarov",
+            "url": null
+          },
+          {
+            "name": "Aaron Roth",
+            "url": "https://www.cis.upenn.edu/~aaroth/"
+          }
+        ],
+        "links": [],
+        "abstract": ""
+      },
+      {
+        "title": "Online Multivalid Learning: Means, Moments, and Prediction Intervals",
+        "url": "https://arxiv.org/abs/2101.01739",
+        "status": "ITCS 2022.",
+        "authors": [
+          {
+            "name": "Varun Gupta",
+            "url": null
+          },
+          {
+            "name": "Chris Jung",
+            "url": "https://www.cis.upenn.edu/~chrjung/"
+          },
+          {
+            "name": "Georgy Noarov",
+            "url": null
+          },
+          {
+            "name": "Aaron Roth",
+            "url": "https://www.cis.upenn.edu/~aaroth/"
+          }
+        ],
+        "links": [],
+        "abstract": ""
+      },
+      {
+        "title": "Moment Multicalibration for Uncertainty Estimation",
+        "url": "https://arxiv.org/abs/2008.08037",
+        "status": "COLT 2021.",
+        "authors": [
+          {
+            "name": "Chris Jung",
+            "url": "https://www.cis.upenn.edu/~chrjung/"
+          },
+          {
+            "name": "Changhwa Lee",
+            "url": "https://sites.google.com/view/changhwalee/home"
+          },
+          {
+            "name": "Aaron Roth",
+            "url": "https://www.cis.upenn.edu/~aaroth/"
+          },
+          {
+            "name": "Rakesh Vohra",
+            "url": "https://sites.google.com/site/quaerereverum9/"
+          }
+        ],
+        "links": [
+          {
+            "text": "Working Paper on ArXiv",
+            "url": "https://arxiv.org/abs/2008.08037"
+          }
+        ],
+        "abstract": "We show how to achieve the notion of \"multicalibration\" from H\u00e9bert-Johnson et al. [2018] not just for means, but also for variances and other higher moments. Informally, it means that we can find regression functions which, given a data point, can make point predictions not just for the expectation of its label, but for higher moments of its label distribution as well-and those predictions match the true distribution quantities when averaged not just over the population as a whole, but also when averaged over an enormous number of finely defined subgroups. It yields a principled way to estimate the uncertainty of predictions on many different subgroups-and to diagnose potential sources of unfairness in the predictive power of features across subgroups. As an application, we show that our moment estimates can be used to derive marginal prediction intervals that are simultaneously valid as averaged over all of the (sufficiently large) subgroups for which moment multicalibration has been obtained."
+      },
+      {
+        "title": "Fair Prediction with Endogenous Behavior",
+        "url": "https://arxiv.org/abs/2002.07147",
+        "status": "EC 2020.",
+        "authors": [
+          {
+            "name": "Chris Jung",
+            "url": "https://www.cis.upenn.edu/~chrjung/"
+          },
+          {
+            "name": "Sampath Kannan",
+            "url": "https://www.cis.upenn.edu/~kannan/"
+          },
+          {
+            "name": "Changhwa Lee",
+            "url": "https://sites.google.com/view/changhwalee/home"
+          },
+          {
+            "name": "Aaron Roth",
+            "url": "https://www.cis.upenn.edu/~aaroth/"
+          },
+          {
+            "name": "Rakesh Vohra",
+            "url": "https://sites.google.com/site/quaerereverum9/"
+          }
+        ],
+        "links": [],
+        "abstract": ""
+      },
+      {
+        "title": "Fairness Incentives for Myopic Agents",
+        "url": "https://arxiv.org/abs/1705.02321",
+        "status": "EC 2017.",
+        "authors": [
+          {
+            "name": "Sampath Kannan",
+            "url": "https://www.cis.upenn.edu/~kannan/"
+          },
+          {
+            "name": "Michael Kearns",
+            "url": "http://www.cis.upenn.edu/~mkearns/"
+          },
+          {
+            "name": "Jamie Morgenstern",
+            "url": "https://www.cis.upenn.edu/~jamiemor/"
+          },
+          {
+            "name": "Aaron Roth",
+            "url": "http://www.cis.upenn.edu/~aaroth/"
+          },
+          {
+            "name": "Rakesh Vohra",
+            "url": "https://sites.google.com/site/quaerereverum9/"
+          },
+          {
+            "name": "Steven Wu",
+            "url": "http://www.cis.upenn.edu/~wuzhiwei/"
+          }
+        ],
+        "links": [],
+        "abstract": ""
+      },
+      {
+        "title": "The Strange Case of Privacy in Equilibrium Models",
+        "url": "http://arxiv.org/abs/1508.03080",
+        "status": "EC 2016.",
+        "authors": [
+          {
+            "name": "Rachel Cummings",
+            "url": "http://users.cms.caltech.edu/~rachelc/"
+          },
+          {
+            "name": "Katrina Ligett",
+            "url": "http://users.cms.caltech.edu/~katrina/"
+          },
+          {
+            "name": "Aaron Roth",
+            "url": "http://www.cis.upenn.edu/~aaroth/"
+          }
+        ],
+        "links": [],
+        "abstract": ""
+      },
+      {
+        "title": "Mechanism Design in Large Games: Incentives and Privacy",
+        "url": "https://arxiv.org/abs/1207.4084",
+        "status": "ITCS 2014.",
+        "authors": [
+          {
+            "name": "Michael Kearns",
+            "url": "http://www.cis.upenn.edu/~mkearns/"
+          },
+          {
+            "name": "Aaron Roth",
+            "url": "http://www.cis.upenn.edu/~aaroth/"
+          },
+          {
+            "name": "Jon Ullman",
+            "url": "http://people.seas.harvard.edu/~jullman/"
+          }
+        ],
+        "links": [],
+        "abstract": ""
+      },
+      {
+        "title": "Ironing in Dynamic Revenue Management: Posted Prices and Biased Auctions",
+        "url": "http://dx.doi.org/10.1137/1.9781611973105.45",
+        "status": "SODA 2013.",
+        "authors": [
+          {
+            "name": "Rahul Deb",
+            "url": "http://www.economics.utoronto.ca/debrahul/"
+          }
+        ],
+        "links": [],
+        "abstract": ""
+      },
+      {
+        "title": "Auctions with Intermediaries",
+        "url": "http://dl.acm.org/citation.cfm?id=1807346",
+        "status": "EC 2010.",
+        "authors": [
+          {
+            "name": "Jon Feldman",
+            "url": "http://research.google.com/pubs/jonfeld.html"
+          },
+          {
+            "name": "Vahab Mirrokni",
+            "url": "http://research.google.com/pubs/mirrokni.html"
+          },
+          {
+            "name": "S Muthukrishnan",
+            "url": "http://www.cs.rutgers.edu/~muthu/"
+          }
+        ],
+        "links": [],
+        "abstract": ""
+      }
+    ]
+  },
+  {
+    "category": "Other Publications",
+    "papers": [
+      {
+        "title": "Mechanism Design and Privacy (SigEcom)",
+        "url": "http://www.sigecom.org/exchanges/volume_12/1/PAI.pdf",
+        "status": "SIGecom Exchanges, 12(1), June 2013.",
+        "authors": [
+          {
+            "name": "Aaron Roth",
+            "url": "http://www.cis.upenn.edu/~aaroth/"
+          }
+        ],
+        "links": [],
+        "abstract": ""
+      },
+      {
+        "title": "Competition in Mechanisms",
+        "url": "http://www.sigecom.org/exchanges/volume_9/1/PAI.pdf",
+        "status": "SIGecom Exchanges, 9(1), June 2010.",
+        "authors": [],
+        "links": [],
+        "abstract": ""
+      },
+      {
+        "title": "Collusive Outcomes via Pricing Algorithms",
+        "url": "https://academic.oup.com/jeclap/article/12/4/334/6220168?guestAccessKey=e80f5fb9-dd44-44c4-9c35-e72c20ad9dfa",
+        "status": "Journal of European Competition Law and Practice, 2021.",
+        "authors": [
+          {
+            "name": "Karsten Hansen",
+            "url": "https://rady.ucsd.edu/people/faculty/hansen/"
+          },
+          {
+            "name": "Kanishka Misra",
+            "url": "https://sites.google.com/view/kmisra"
+          }
+        ],
+        "links": [],
+        "abstract": ""
+      },
+      {
+        "title": "Mechanism Design in Large Games: Incentives and Privacy (Journal)",
+        "url": "https://www.aeaweb.org/articles?id=10.1257/aer.104.5.431",
+        "status": "American Economic Review Papers and Proceedings, 104(5): 431-5.",
+        "authors": [
+          {
+            "name": "Michael Kearns",
+            "url": "http://www.cis.upenn.edu/~mkearns/"
+          },
+          {
+            "name": "Aaron Roth",
+            "url": "http://www.cis.upenn.edu/~aaroth/"
+          },
+          {
+            "name": "Jon Ullman",
+            "url": "http://www.ccs.neu.edu/home/jullman/"
+          }
+        ],
+        "links": [],
+        "abstract": ""
+      }
+    ]
+  },
+  {
+    "category": "Dormant Papers",
+    "papers": [
+      {
+        "title": "Robust Mediators in Large Games",
+        "url": "https://arxiv.org/abs/1512.02698",
+        "status": "",
+        "authors": [
+          {
+            "name": "Michael Kearns",
+            "url": "http://www.cis.upenn.edu/~mkearns/"
+          },
+          {
+            "name": "Ryan Rogers",
+            "url": "https://www.math.upenn.edu/~ryrogers/"
+          },
+          {
+            "name": "Aaron Roth",
+            "url": "http://www.cis.upenn.edu/~aaroth/"
+          },
+          {
+            "name": "Jon Ullman",
+            "url": "http://www.ccs.neu.edu/home/jullman/"
+          }
+        ],
+        "links": [],
+        "abstract": "A mediator is a mechanism that can only suggest actions to players, as a function of all agents' reported types, in a given game of incomplete information. We study two kinds of mediators, \"strong\" and \"weak.\" Players can choose to opt-out of using a strong mediator but cannot misrepresent their type if they opt-in. Such a mediator is \"strong\" because we can view it as having the ability to verify player types. Weak mediators lack this ability--- players are free to misrepresent their type to a weak mediator. We show a striking result---in a prior-free setting, assuming only that the game is large and players have private types, strong mediators can implement an approximate correlated equilibrium of the complete-information game: i.e., there exists a way to select an approximate correlated equilibrium of the complete information game for each realization of types such that each player is approximately incentivized to opt-in and follow the mediator's suggested action. If the game is a congestion game, then the same result holds using only weak mediators (i.e. each player is approximately incentivized to opt-in, report her type truthfully and then follow the mediator's suggested action). Our result follows from a novel application of differential privacy, in particular, a variant we propose called joint differential privacy."
+      },
+      {
+        "title": "Do Online Social Networks Increase Welfare?",
+        "url": "https://ideas.repec.org/p/ebg/iesewp/d-1118.html",
+        "status": "",
+        "authors": [
+          {
+            "name": "Manuel Mueller-Frank",
+            "url": "https://sites.google.com/site/muellerfrankmanuel/"
+          }
+        ],
+        "links": [],
+        "abstract": "Do Online Social Networks increase WelfareWe consider a strategic online social network that controls information flows between agents in a social learning setting. Agents on the network select among products of competing firms of unknown quality. The network sells advertising to firms. We consider display advertising, which is standard firm to consumer advertising, and social advertising, in which agents who purchased that firm's product are highlighted to their friends. We show that in equilibrium, information is unbiased relative to a setting with no advertising. However, the network reduces the information agents see about others\u2019 purchases, since this increases advertising revenue. Hence consumer welfare is lower than in the first best."
+      },
+      {
+        "title": "The Design of Affirmative Action Policy: A Mechanism Design Approach",
+        "url": "https://sites.google.com/view/malleshpai/working-papers/subsidies-and-set-asides",
+        "status": "",
+        "authors": [
+          {
+            "name": "Rakesh Vohra",
+            "url": "https://sites.google.com/site/quaerereverum9/"
+          }
+        ],
+        "links": [],
+        "abstract": "We study a model in which agents undertake investment for skills and then participate in an auction for a productive opportunity (e.g. a spot in college). Investment increases an agent's value for the opportunity. The disadvantaged ``targeted'' group has higher marginal costs of investment than the ``regular'' group. The constrained efficient mechanism for a social planner with a preference for diversity involves a flat subsidy to the targeted group. A subsidy always increases investment by the targeted group relative to the efficient auction. A planner concerned with incentivizing investment by the targeted group may prefer to use a quota."
+      }
+    ]
+  },
+  {
+    "category": "Patents",
+    "papers": [
+      {
+        "title": "Fair Discounting Auctions",
+        "url": "http://www.google.com/patents/US7778869?dq=fair+discounting+auction&hl=en&sa=X&ei=RPRtUMnrK7PO0QHw1oGIBQ&sqi=2&pjf=1&ved=0CC8Q6AEwAA",
+        "status": "(US Patent #7,778,869)",
+        "authors": [
+          {
+            "name": "Kamal Jain",
+            "url": "http://labs.ebay.com/people/kamal-jain/"
+          },
+          {
+            "name": "Rakesh Vohra",
+            "url": "https://sites.google.com/site/quaerereverum9/"
+          }
+        ],
+        "links": [],
+        "abstract": ""
+      }
+    ]
+  }
+]
