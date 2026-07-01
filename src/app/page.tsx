@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { Mail, GraduationCap, Twitter, Linkedin } from 'lucide-react';
 
 export default function Home() {
@@ -27,9 +26,6 @@ export default function Home() {
           <div className="text-[1.1rem] text-slate-600 font-light leading-loose">
             <p className="mb-4">
               I am a researcher at <a href="https://tempo.xyz/" className="text-slate-800 hover:text-[var(--color-nw-purple)] transition-colors underline decoration-1 underline-offset-4 decoration-slate-300 hover:decoration-[var(--color-nw-purple)]">Tempo Labs</a>.
-            </p>
-            <p className="mb-4">
-              I am also the Lay Family Professor in the <a href="http://economics.rice.edu" className="text-slate-800 hover:text-[var(--color-nw-purple)] transition-colors underline decoration-1 underline-offset-4 decoration-slate-300 hover:decoration-[var(--color-nw-purple)]">Department of Economics</a> at <a href="http://www.rice.edu" className="text-slate-800 hover:text-[var(--color-nw-purple)] transition-colors underline decoration-1 underline-offset-4 decoration-slate-300 hover:decoration-[var(--color-nw-purple)]">Rice University</a> (on leave), and a <a href="https://cepr.org/" className="text-slate-800 hover:text-[var(--color-nw-purple)] transition-colors underline decoration-1 underline-offset-4 decoration-slate-300 hover:decoration-[var(--color-nw-purple)]">CEPR</a> Research Fellow.
             </p>
           </div>
         </div>
@@ -74,10 +70,13 @@ export default function Home() {
         <h2 className="text-2xl font-serif font-semibold text-[var(--color-nw-purple)]">Background</h2>
         <div className="text-slate-700 leading-relaxed space-y-4">
           <p>
-            Prior to joining Rice, I was a Janice and Julian Bers Assistant Professor in the Department of Economics at the University of Pennsylvania.
+            Before joining <a href="https://tempo.xyz/" className="hover:text-[var(--color-nw-purple)]">Tempo Labs</a>, I was the Lay Family Professor in the <a href="https://economics.rice.edu/" className="hover:text-[var(--color-nw-purple)]">Department of Economics</a> at <a href="https://www.rice.edu/" className="hover:text-[var(--color-nw-purple)]">Rice University</a>, a research advisor at <a href="https://www.paradigm.xyz/" className="hover:text-[var(--color-nw-purple)]">Paradigm</a>, and a mechanism designer at <a href="https://www.smg.org/" className="hover:text-[var(--color-nw-purple)]">Special Mechanisms Group</a>, a division of <a href="https://consensys.io/" className="hover:text-[var(--color-nw-purple)]">Consensys</a>.
           </p>
           <p>
-            I hold a PhD in Managerial Economics and Strategy from the <a href="http://www.kellogg.northwestern.edu/" className="hover:text-[var(--color-nw-purple)]">Kellogg School of Management</a>, Northwestern University, and a Bachelor's degree in Computer Science and Engineering from the <a href="http://www.iitd.ernet.in" className="hover:text-[var(--color-nw-purple)]">Indian Institute of Technology, Delhi</a>.
+            Prior to Rice, I was a Janice and Julian Bers Assistant Professor in the Department of Economics at the University of Pennsylvania.
+          </p>
+          <p>
+            I hold a PhD in Managerial Economics and Strategy from the <a href="http://www.kellogg.northwestern.edu/" className="hover:text-[var(--color-nw-purple)]">Kellogg School of Management</a>, Northwestern University, and a Bachelor&apos;s degree in Computer Science and Engineering from the <a href="http://www.iitd.ernet.in" className="hover:text-[var(--color-nw-purple)]">Indian Institute of Technology, Delhi</a>.
           </p>
         </div>
       </section>

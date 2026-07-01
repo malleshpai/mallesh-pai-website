@@ -69,44 +69,6 @@
         ],
         "links": [],
         "abstract": "Mechanisms for decentralized finance on blockchains suffer from various problems, including suboptimal price execution for users, latency, and a worse user experience compared to their centralized counterparts. Recently, off-chain marketplaces, colloquially called `intent markets,' have been proposed as a solution to these problems. In these markets, agents called solvers compete to satisfy user orders, which may include complicated user-specified conditions. We provide two formal models of solvers' strategic behavior: one probabilistic and another deterministic. In our first model, solvers initially pay upfront costs to enter a Dutch auction to fill the user's order and then exert congestive, costly effort to search for prices for the user. Our results show that the costs incurred by solvers result in restricted entry in the market. Further, in the presence of costly effort and congestion, our results counter-intuitively show that a planner who aims to maximize user welfare may actually prefer to restrict entry, resulting in limited oligopoly. We then introduce an alternative, optimization-based deterministic model which corroborates these results. We conclude with extensions of our model to other auctions within blockchains and non-cryptocurrency applications, such as the US SEC's Proposal 615."
-      },
-      {
-        "title": "Does Your Blockchain Need Multidimensional Transaction Fees?",
-        "url": "https://arxiv.org/abs/2504.15438",
-        "status": "(new)",
-        "authors": [
-          {
-            "name": "Nir Lavee",
-            "url": null
-          },
-          {
-            "name": "Noam Nisan",
-            "url": null
-          },
-          {
-            "name": "Max Resnick",
-            "url": "https://www.linkedin.com/in/max-resnick"
-          }
-        ],
-        "links": [],
-        "abstract": "Blockchains have block-size limits to ensure the entire cluster can keep up with the tip of the chain. These block-size limits are usually single-dimensional, but richer multidimensional constraints allow for greater throughput. We introduce the concept of an \u03b1-approximation and show that the optimal single-dimensional gas measure corresponds to the value of a specific zero-sum game. However, the more general problem of finding the optimal k-dimensional approximation is NP-complete."
-      },
-      {
-        "title": "Latency Advantages in Common-Value Auctions",
-        "url": "https://arxiv.org/abs/2504.02077",
-        "status": "(new)",
-        "authors": [
-          {
-            "name": "Ciamac C. Moallemi",
-            "url": null
-          },
-          {
-            "name": "Dan Robinson",
-            "url": null
-          }
-        ],
-        "links": [],
-        "abstract": "In financial applications, latency advantages - the ability to make decisions later than others - can provide individual participants with an edge by allowing them to gather additional relevant information. We consider a common-value auction with a reserve price in which some bidders may have more information about the value of the item than others. We provide a characterization of the equilibrium strategies and study the welfare and auctioneer revenue implications of the last-mover advantage."
       }
     ]
   },
@@ -410,6 +372,44 @@
   {
     "category": "Papers in Refereed Conference Proceedings",
     "papers": [
+      {
+        "title": "Does Your Blockchain Need Multidimensional Transaction Fees?",
+        "url": "https://arxiv.org/abs/2504.15438",
+        "status": "Financial Cryptography (FC), 2026.",
+        "authors": [
+          {
+            "name": "Nir Lavee",
+            "url": null
+          },
+          {
+            "name": "Noam Nisan",
+            "url": null
+          },
+          {
+            "name": "Max Resnick",
+            "url": "https://www.linkedin.com/in/max-resnick"
+          }
+        ],
+        "links": [],
+        "abstract": "Blockchains have block-size limits to ensure the entire cluster can keep up with the tip of the chain. These block-size limits are usually single-dimensional, but richer multidimensional constraints allow for greater throughput. We introduce the concept of an \u03b1-approximation and show that the optimal single-dimensional gas measure corresponds to the value of a specific zero-sum game. However, the more general problem of finding the optimal k-dimensional approximation is NP-complete."
+      },
+      {
+        "title": "Latency Advantages in Common-Value Auctions",
+        "url": "https://arxiv.org/abs/2504.02077",
+        "status": "Financial Cryptography (FC), 2026.",
+        "authors": [
+          {
+            "name": "Ciamac C. Moallemi",
+            "url": null
+          },
+          {
+            "name": "Dan Robinson",
+            "url": null
+          }
+        ],
+        "links": [],
+        "abstract": "In financial applications, latency advantages - the ability to make decisions later than others - can provide individual participants with an edge by allowing them to gather additional relevant information. We consider a common-value auction with a reserve price in which some bidders may have more information about the value of the item than others. We provide a characterization of the equilibrium strategies and study the welfare and auctioneer revenue implications of the last-mover advantage."
+      },
       {
         "title": "Measuring CEX-DEX Extracted Value and Searcher Profitability: The Darkest of the MEV Dark Forest",
         "url": "https://arxiv.org/abs/2507.13023",

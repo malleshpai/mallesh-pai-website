@@ -17,8 +17,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Mallesh M. Pai | Rice University",
-  description: "Personal website of Mallesh M. Pai, Lay Family Associate Professor of Economics at Rice University.",
+  title: "Mallesh M. Pai | Tempo Labs",
+  description: "Personal website of Mallesh M. Pai, researcher at Tempo Labs.",
   icons: {
     icon: "/profile.jpg",
     apple: "/profile.jpg",

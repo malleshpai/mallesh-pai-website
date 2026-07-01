@@ -1,9 +1,11 @@
 export const profile = {
     name: "Mallesh M. Pai",
-    title: "Lay Family Associate Professor of Economics",
-    affiliation: "Rice University",
-    email: "mallesh.pai@rice.edu",
-    bio: `I am the Lay Family Associate Professor of Economics at Rice University. I am also a Research Fellow at the CEPR. I am also an advisor to Tempo Labs and Paradigm.
+    title: "Researcher",
+    affiliation: "Tempo Labs",
+    email: "mallesh.pai@gmail.com",
+    bio: `I am a researcher at Tempo Labs.
+
+Before joining Tempo Labs, I was the Lay Family Professor in the Department of Economics at Rice University, a research advisor at Paradigm, and a mechanism designer at Special Mechanisms Group, a division of Consensys.
 
 My research interests include mechanism design, auction theory, the economics of privacy and social networks.
 
