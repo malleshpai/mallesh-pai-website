@@ -18,7 +18,7 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://malleshpai.com"),
+  metadataBase: new URL("https://www.malleshmpai.com"),
   title: "Mallesh M. Pai",
   description:
     "Personal website of Mallesh M. Pai, researcher at Tempo Labs working on mechanism design, auction theory, blockchains, and decentralized finance.",
