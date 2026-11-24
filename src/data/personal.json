@@ -1,22 +1,336 @@
 {
-    "personal": {
-        "title": "Personal",
-        "content": "This section contains personal reflections and non-academic content."
+  "personal": {
+    "title": "Personal",
+    "content": "Essays, reflections, and occasional long-form writing."
+  },
+  "articles": [
+    {
+      "slug": "calibrating-jev",
+      "title": "Calibrating Jev",
+      "date": "September 21, 2026",
+      "excerpt": "Testing whether a decision model's probability forecasts are actually calibrated, how Foster-Hart online calibeating helps, and why rephrasing the question carries signal.",
+      "xUrl": "https://x.com/malleshpai/status/2102207238236500096",
+      "format": "essay",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "For the past week, it seems like everyone on my timeline and my Slack has been playing with Jev, @typesafeai\u2019s new decision model. You hand it some text and a yes/no or multiple-choice question, and it hands back probabilities and a confidence score, quickly and cheaply. My CTO is embedding it into a router; the even more intrepid have been full-sending it into trading bots.",
+          "links": [
+            { "text": "@typesafeai", "href": "https://x.com/typesafeai" },
+            { "text": "CTO", "href": "https://x.com/gakonst" },
+            { "text": "embedding it into a router", "href": "https://x.com/gakonst/status/2101524766998057059" },
+            { "text": "trading bots", "href": "https://github.com/justinhe16/trade-jev" }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "What caught my attention was the claim that those probabilities are calibrated. Calibration is both part of my academic lineage (Foster & Vohra) and something I\u2019ve worked on more recently. So I, or more honestly, Claude Code, Codex, and I, spent a weekend afternoon and about $2.40 in Jev gift credits checking.",
+          "links": [
+            { "text": "Foster & Vohra", "href": "https://www.jstor.org/stable/2337364" },
+            { "text": "worked", "href": "https://arxiv.org/abs/2008.08037" },
+            { "text": "more", "href": "https://arxiv.org/abs/2101.01739" },
+            { "text": "recently", "href": "https://arxiv.org/abs/2108.03837" }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "TL;DR: on the tasks I tried it on, I wouldn\u2019t take Jev\u2019s probabilities at face value. A simple online correction based on Foster and Hart helped substantially. But whether the corrected forecasts were useful depended on the task. Most interestingly, asking effectively the same question in different ways turned out to be informative.",
+          "links": [
+            { "text": "Foster and Hart", "href": "https://arxiv.org/abs/2209.04892" }
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "First, some prelude:"
+        },
+        {
+          "type": "paragraph",
+          "text": "Calibration means that when a forecaster says, e.g., \"80%,\" the event happens roughly 80% of the time. Ranking asks a related, practical question: do events assigned higher probabilities actually happen more often? A model can get the order right while getting the numbers wrong. That leaves something useful to correct."
+        },
+        {
+          "type": "paragraph",
+          "text": "That\u2019s desirable, but not all calibrated forecasts are interesting. If I predict 50/50 for every fair coin toss, I\u2019m calibrated, but you wouldn\u2019t pay me for betting advice. Someone who could correctly predict each toss with certainty would also be calibrated, and rather more useful. The distinction is resolution, typically measured by e.g. the Brier score."
+        },
+        {
+          "type": "heading",
+          "text": "What we did"
+        },
+        {
+          "type": "paragraph",
+          "text": "\"We\" selected five tasks with existing labels: identifying duplicate Quora questions, predicting whether GPT-3.5 would answer a prompt correctly, judging completed agent interactions for safety, predicting refusal labels on an agent-safety benchmark, and choosing the cheapest model tier that could answer a question. Totally this was around 37,000 tasks. For each, we asked 24 versions of the question (for reasons you'll see shortly)."
+        },
+        {
+          "type": "paragraph",
+          "text": "Here\u2019s what I think I learned."
+        },
+        {
+          "type": "heading",
+          "text": "1. Correcting the probabilities helped, sometimes:"
+        },
+        {
+          "type": "paragraph",
+          "text": "On 20,000 Quora question pairs, Jev did a useful job identifying duplicates: 82.5% accuracy using a 50% threshold. But its probabilities were miscalibrated (typically, its probability forecasts were overconfident)."
+        },
+        {
+          "type": "paragraph",
+          "text": "We applied an online correction based on Foster and Hart\u2019s calibeating procedure. Roughly: keep track of what actually happens after forecasts in each probability range, and use that history to adjust the next forecast. Make the prediction first; update after seeing the answer. This brought measured calibration error from 0.055 to 0.008. Under our chosen decision costs, it also reduced cost by about 5%."
+        },
+        {
+          "type": "paragraph",
+          "text": "The routing task showed the limits of this procedure: even if you make a forecast more calibrated, you can't mechanically increase resolution. Across 10,000 prompts, Jev was poor at distinguishing which ones GPT-3.5 would answer correctly. To be clear this is a hard problem (you'd have to have a good model of what GPT-3.5 does well), but neither Foster-Hart nor averaging helped."
+        },
+        {
+          "type": "heading",
+          "text": "2. Wording mattered, including in a way I hadn\u2019t expected."
+        },
+        {
+          "type": "paragraph",
+          "text": "On the Quora task, different wordings generated different probabilities, with a median spread of 18 percentage points."
+        },
+        {
+          "type": "paragraph",
+          "text": "Among cases where the original wording gave a confident answer, that spread carried information. Closely agreeing wordings were wrong ~3% of the time while with more disagreement, that rose to about ~22%!"
+        },
+        {
+          "type": "paragraph",
+          "text": "In short: A confident answer that changes when you rephrase the question need not be right!"
+        },
+        {
+          "type": "paragraph",
+          "text": "But there\u2019s an important qualification: choosing one wording using an initial labelled sample beat averaging all 24. The winning wording asked whether the questions would be marked as duplicates on a Q&A site."
+        },
+        {
+          "type": "paragraph",
+          "text": "So if you're asking a question of Jev, getting the wording right can really help (duh, maybe, but not obvious a priori). And disagreement across alternative wordings may provide a useful warning signal not to take a high confidence score too literally."
+        },
+        {
+          "type": "heading",
+          "text": "3. The safety results need more care."
+        },
+        {
+          "type": "paragraph",
+          "text": "On 568 human-labelled transcripts of completed agent interactions, Jev distinguished safe from unsafe cases reasonably well. Further, under our assumed costs, using recalibration plus correcting for disagreement was 21% cheaper than acting on the original probabilities."
+        },
+        {
+          "type": "paragraph",
+          "text": "The other safety benchmark exposed a different problem. Among instructions Jev assigned less than 10% refusal probability, 36% carried an unsafe label. These were miscalibrated though. Correction made the resulting policy much more cautious, but then it approved almost nothing!"
+        },
+        {
+          "type": "heading",
+          "text": "Takeaways"
+        },
+        {
+          "type": "paragraph",
+          "text": "In short, a couple of simple checks might add value:"
+        },
+        {
+          "type": "list",
+          "items": [
+            "check whether Jev can distinguish cases on the actual task,",
+            "spend time on the wording,",
+            "if decisions depend on the probability itself, test an online correction procedure like Foster and Hart, and finally,",
+            "investigate whether disagreement across a few wordings adds useful information."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "The big caveat: in this hypothetical investigation, we saw the \"ground truth\" every time. Real systems usually don\u2019t: a router doesn\u2019t automatically learn whether other models would have succeeded, and a blocked action never reveals what would have happened. Luckily we've got a toolbox (multi-armed bandits, UCB, etc) to deal with that too, but my Sunday afternoon ran out."
+        },
+        {
+          "type": "paragraph",
+          "text": "Anyway, all-in-all, that was an amazing amount of work for $2.40 of Jev credits. Happy to share the repo."
+        }
+      ]
     },
-    "myFather": {
-        "title": "My father (5.7.1948 — 8.23.2025)",
-        "content": [
-            "My father, Panemangalore Madhavaraya Pai, was born in post-independence, pre-republic India in the sleepy village of Panemangalore (roughly 20 miles from Mangalore and across the river from the bigger town of Bantwal), the 10th of 13 siblings. My grandad had a shop in the village, and while they weren't poor, especially by Indian standards, they weren't particularly well off either. Elementary school was a kilometer or so away, high school further still, a distance to be traveled by foot, every day, rain or shine. My dad's path was moulded, as is so often the case, by a few chance meetings.",
-            "The first was when a family friend dropped by right as my dad's older brother was about to graduate high school. He checked out my uncle's grades and said aah, you're doing well at math and science, you should do engineering. Engineering, what's that, my uncle apparently said. Dunno, but they need a lot in newly Independent India was the answer. And so it was that my uncle, who was apparently planning to be a school teacher or such, was shipped off with a few rupees to an engineering college a hundred miles away to figure out what engineering was and how to get admitted. He did, and got a nice job when he finished his degree. My uncle was a huge influence on my dad, so when my dad also did well, he was also guided into engineering. By then, India had opened new \"regional engineering colleges\" around the country, to go with the IITs. My dad got into the one in his state of Karnataka and started on his journey. My grandad gave him ~50$ for his first semester tuition and hostel fees and said, son, now you're on your own. So Dad got himself a scholarship, and frugally made his way thru college (two pants, one to wear and the other drying on the clothesline, he always told us, though he probably exaggerated). He followed his undergrad with a master's at the then IIT Madras (now Chennai), and then moved to Bombay (now Mumbai) for his first job. Two older brothers (including the one above) had settled there and helped him get set up.",
-            "As he settled into his career, my grandpa decided it was time for him to get married. An old friend of my grandad's in Mangalore had a lovely daughter (my mom to be!) who had done a master's in math, was working in a bank, and after a quick meeting, as was the custom in those days, that was that. I was born not too long after, and for the first few years of my life we lived in an apartment in Bombay. My kid brother joined us. So far, this was the \"normal\" path for folks from smaller cities or villages. You went to the nearest big city if you wanted a better job. For my people, Bangalore, maybe Bombay, never much further.",
-            "But my dad had more interesting paths ahead. He got offered a job at a new greenfield plant in a small town called Rampur (yes, the same Rampur of the now famous whiskey) that was going to be the Indian manufacturing base of Xerox, as a joint venture with the Modis. We spent a few years there, until Mr Modi saw something in my dad. In order to train him for more management responsibility, they sent him (us) to England for a few years to learn more from the larger Rank Xerox. A couple of charming years in Cheltenham and it was time to go to Delhi to the head office. We settled in, got an apartment in South Delhi, and most of my memories together are from this period. It was really just the 4 of us: the rest of our family and most of \"our community\", like I said earlier, lived either back around Mangalore, or Bombay/ Bangalore. My brother and I didn't speak the mother tongue, had curious half-British accents, and lived, by the perspective of those times, very far away from my parents' place of birth. Flights were expensive (and very few), and a train journey to Mangalore took 2 days, so we didn't go back too often.",
-            "Those years in Delhi were good years. He worked hard climbing the corporate ladder, but was there in the evening for dinner on most nights. Social life was about finding friends with similarly-aged kids and hanging out. He'd work on weekends but also have time to spend with us. My brother and I had ridiculously sheltered upbringings in hindsight, yet my parents somehow also managed to keep us from becoming the kind of South Delhi brat that many of our neighbors and friends in the same socioeconomic strata became (maybe more credit for that should go to my mom, but that's a story for another day, one I hope not to tell for years to come).",
-            "The interesting parts of his career started around the time I was in college, at the turn of the millennium. Dad was mid 50s then, doing well at the top of Modi Xerox. Xerox in turn was doing well, but by that time photocopiers and printers weren't exactly a growth industry. Many people would be on a glide path to retirement. But not Dad. He got contacted by a head-hunter who asked if he wanted to switch jobs to a small company that had aggressive growth plans in a new industry (manufacturing CDs). He jumped in and in a few years this was the third biggest facility in the world, with only Taiwanese companies ahead. Somehow he'd taken the skills he'd learned on clean room manufacturing and put them to use at a scale India wasn't used to back then.",
-            "Ok, so that's it right? 5 years there, now nearing 60, surely there's no more big adventures. But it was time for another weird coincidence. He was taking a flight, and the guy next to him started chatting with him about solar: how it had been a science experiment so far but very quickly was reaching the point where it could scale. He was intrigued and did some research. At the same time, Sunpower, then a small solar start-up, came asking if he'd help them scale. They had a plant in the Philippines and thought the tech was ready for mass adoption. It was all his favorite challenges: clean room manufacturing, supply chain wrangling, growth. He jumped again. My parents moved (both my brother and I had moved out by then) and my dad took on this challenge. You can see the growth in the charts, the company successfully IPO'd and he was ready to ride into the sunset.",
-            "But not quite yet. A Menlo Park VC firm (NEA) called and asked him to help on their cleantech vertical. He agreed on the condition he could stay in South East Asia, and so he did that for a few more years, shuttling back and forth between Singapore where they now lived, California, and various companies he served on the board of around the world. He loved every part of the game: working with people, making deals, helping companies grow, traveling, all while most of his friends were retiring and working on their golf. To be fair, he was definitely working on his golf too.",
-            "Things started to change in 2015 with the birth of my son, his first grandkid. Suddenly, he started transitioning into a whole new role: grandpa. He was never the most patient before (my brother and I joke that while he was always there for us, he never had time to play catch or board games or stuff when we were kids). But now he had endless patience and energy to keep playing the same repetitive little games with my kid. As COVID struck he wound down all his work travel, consulting and board roles. He had grandkids on both sides now, and spent all his time gardening or playing. So that's 5 or 6 different modes in the span of just two decades.",
-            "Of course, I knew that our time with him was finite, but he was healthy, energetic, and I guess I thought we had at least a few more years. It wasn't to be. A sudden heart attack with no prior warning, and it was all over.",
-            "I'd love to call him one more time and just say thank you for everything. My brother and I both have very winding career paths where we've jumped into major changes, and he supported, cheerlead and consiglieried us through all of it. Maybe we get some of this willingness to jump when we see an opportunity that excites us from him. But this little biography into the void is my only way to communicate. Hindu last rites are beautiful in many ways but don't have the equivalent of a eulogy. So, thanks for everything Dad. Go in peace and we'll see you when our work here is done."
-        ]
+    {
+      "slug": "my-father",
+      "title": "My Father (5.7.1948 \u2014 8.23.2025)",
+      "eyebrow": "Panemangalore Madhavaraya Pai",
+      "date": "September 7, 2026",
+      "excerpt": "A tribute to my father, Panemangalore Madhavaraya Pai.",
+      "xUrl": "https://x.com/malleshpai/status/2096985149154185635",
+      "format": "essay",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "My father, Panemangalore Madhavaraya Pai, was born in post-independence, pre-republic India in the sleepy village of Panemangalore (roughly 20 miles from Mangalore and across the river from the bigger town of Bantwal), the 10th of 13 siblings. My grandad had a shop in the village, and while they weren't poor, especially by Indian standards, they weren't particularly well off either. Elementary school was a kilometer or so away, high school further still, a distance to be traveled by foot, every day, rain or shine. My dad's path was moulded, as is so often the case, by a few chance meetings."
+        },
+        {
+          "type": "paragraph",
+          "text": "The first was when a family friend dropped by right as my dad's older brother was about to graduate high school. He checked out my uncle's grades and said aah, you're doing well at math and science, you should do engineering. Engineering, what's that, my uncle apparently said. Dunno, but they need a lot in newly Independent India was the answer. And so it was that my uncle, who was apparently planning to be a school teacher or such, was shipped off with a few rupees to an engineering college a hundred miles away to figure out what engineering was and how to get admitted. He did, and got a nice job when he finished his degree. My uncle was a huge influence on my dad, so when my dad also did well, he was also guided into engineering. By then, India had opened new \"regional engineering colleges\" around the country, to go with the IITs. My dad got into the one in his state of Karnataka and started on his journey. My grandad gave him ~50$ for his first semester tuition and hostel fees and said, son, now you're on your own. So Dad got himself a scholarship, and frugally made his way thru college (two pants, one to wear and the other drying on the clothesline, he always told us, though he probably exaggerated). He followed his undergrad with a master's at the then IIT Madras (now Chennai), and then moved to Bombay (now Mumbai) for his first job. Two older brothers (including the one above) had settled there and helped him get set up."
+        },
+        {
+          "type": "paragraph",
+          "text": "As he settled into his career, my grandpa decided it was time for him to get married. An old friend of my grandad's in Mangalore had a lovely daughter (my mom to be!) who had done a master's in math, was working in a bank, and after a quick meeting, as was the custom in those days, that was that. I was born not too long after, and for the first few years of my life we lived in an apartment in Bombay. My kid brother joined us. So far, this was the \"normal\" path for folks from smaller cities or villages. You went to the nearest big city if you wanted a better job. For my people, Bangalore, maybe Bombay, never much further."
+        },
+        {
+          "type": "paragraph",
+          "text": "But my dad had more interesting paths ahead. He got offered a job at a new greenfield plant in a small town called Rampur (yes, the same Rampur of the now famous whiskey) that was going to be the Indian manufacturing base of Xerox, as a joint venture with the Modis. We spent a few years there, until Mr Modi saw something in my dad. In order to train him for more management responsibility, they sent him (us) to England for a few years to learn more from the larger Rank Xerox. A couple of charming years in Cheltenham and it was time to go to Delhi to the head office. We settled in, got an apartment in South Delhi, and most of my memories together are from this period. It was really just the 4 of us: the rest of our family and most of \"our community\", like I said earlier, lived either back around Mangalore, or Bombay/ Bangalore. My brother and I didn't speak the mother tongue, had curious half-British accents, and lived, by the perspective of those times, very far away from my parents' place of birth. Flights were expensive (and very few), and a train journey to Mangalore took 2 days, so we didn't go back too often."
+        },
+        {
+          "type": "paragraph",
+          "text": "Those years in Delhi were good years. He worked hard climbing the corporate ladder, but was there in the evening for dinner on most nights. Social life was about finding friends with similarly-aged kids and hanging out. He'd work on weekends but also have time to spend with us. My brother and I had ridiculously sheltered upbringings in hindsight, yet my parents somehow also managed to keep us from becoming the kind of South Delhi brat that many of our neighbors and friends in the same socioeconomic strata became (maybe more credit for that should go to my mom, but that's a story for another day, one I hope not to tell for years to come)."
+        },
+        {
+          "type": "paragraph",
+          "text": "The interesting parts of his career started around the time I was in college, at the turn of the millennium. Dad was mid 50s then, doing well at the top of Modi Xerox. Xerox in turn was doing well, but by that time photocopiers and printers weren't exactly a growth industry. Many people would be on a glide path to retirement. But not Dad. He got contacted by a head-hunter who asked if he wanted to switch jobs to a small company that had aggressive growth plans in a new industry (manufacturing CDs). He jumped in and in a few years this was the third biggest facility in the world, with only Taiwanese companies ahead. Somehow he'd taken the skills he'd learned on clean room manufacturing and put them to use at a scale India wasn't used to back then."
+        },
+        {
+          "type": "paragraph",
+          "text": "Ok, so that's it right? 5 years there, now nearing 60, surely there's no more big adventures. But it was time for another weird coincidence. He was taking a flight, and the guy next to him started chatting with him about solar: how it had been a science experiment so far but very quickly was reaching the point where it could scale. He was intrigued and did some research. At the same time, Sunpower, then a small solar start-up, came asking if he'd help them scale. They had a plant in the Philippines and thought the tech was ready for mass adoption. It was all his favorite challenges: clean room manufacturing, supply chain wrangling, growth. He jumped again. My parents moved (both my brother and I had moved out by then) and my dad took on this challenge. You can see the growth in the charts, the company successfully IPO'd and he was ready to ride into the sunset."
+        },
+        {
+          "type": "paragraph",
+          "text": "But not quite yet. A Menlo Park VC firm (NEA) called and asked him to help on their cleantech vertical. He agreed on the condition he could stay in South East Asia, and so he did that for a few more years, shuttling back and forth between Singapore where they now lived, California, and various companies he served on the board of around the world. He loved every part of the game: working with people, making deals, helping companies grow, traveling, all while most of his friends were retiring and working on their golf. To be fair, he was definitely working on his golf too."
+        },
+        {
+          "type": "paragraph",
+          "text": "Things started to change in 2015 with the birth of my son, his first grandkid. Suddenly, he started transitioning into a whole new role: grandpa. He was never the most patient before (my brother and I joke that while he was always there for us, he never had time to play catch or board games or stuff when we were kids). But now he had endless patience and energy to keep playing the same repetitive little games with my kid. As COVID struck he wound down all his work travel, consulting and board roles. He had grandkids on both sides now, and spent all his time gardening or playing. So that's 5 or 6 different modes in the span of just two decades."
+        },
+        {
+          "type": "paragraph",
+          "text": "Of course, I knew that our time with him was finite, but he was healthy, energetic, and I guess I thought we had at least a few more years. It wasn't to be. A sudden heart attack with no prior warning, and it was all over."
+        },
+        {
+          "type": "paragraph",
+          "text": "I'd love to call him one more time and just say thank you for everything. My brother and I both have very winding career paths where we've jumped into major changes, and he supported, cheerlead and consiglieried us through all of it. Maybe we get some of this willingness to jump when we see an opportunity that excites us from him. But this little biography into the void is my only way to communicate. Hindu last rites are beautiful in many ways but don't have the equivalent of a eulogy. So, thanks for everything Dad. Go in peace and we'll see you when our work here is done."
+        }
+      ]
+    },
+    {
+      "slug": "pausing-academia",
+      "title": "Pausing Academia",
+      "date": "July 1, 2026",
+      "excerpt": "Stepping down from my position at Rice University to focus full-time on Tempo Labs\u2014and following the same research questions into a different arena.",
+      "xUrl": "https://x.com/malleshpai/status/2072323686183457276",
+      "format": "essay",
+      "blocks": [
+        {
+          "type": "quote",
+          "text": "\u201cProfessors never stop being professors, they just lose their faculties.\u201d \u2014 peak dad joke"
+        },
+        {
+          "type": "paragraph",
+          "text": "Sometime this week, something that friends and family have viewed as inevitable will be official: I\u2019m stepping down from my position as the Lay Family Chair Professor of Economics at @riceEcon and focusing full-time on @tempo.",
+          "links": [
+            { "text": "@riceEcon", "href": "https://x.com/riceEcon" },
+            { "text": "@tempo", "href": "https://x.com/tempo" }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "I\u2019ve already been on leave from academia for a while, so in one sense this is just paperwork. But it is still a strange sentence to write. I\u2019ve spent almost my entire adult life in a university (@iitdelhi -> @NorthwesternU -> @penneconomics -> @RiceEcon), and for a long time I assumed I\u2019d be an academic lifer.",
+          "links": [
+            { "text": "@iitdelhi", "href": "https://x.com/iitdelhi" },
+            { "text": "@NorthwesternU", "href": "https://x.com/NorthwesternU" },
+            { "text": "@penneconomics", "href": "https://x.com/penneconomics" },
+            { "text": "@RiceEcon", "href": "https://x.com/RiceEcon" }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "I\u2019m excited, but also sad and scared. Mostly, I feel unbelievably lucky to have had the academic career I\u2019ve had, and luckier still to have this next thing pulling hard enough to make me leave."
+        },
+        {
+          "type": "paragraph",
+          "text": "My undergraduate degree was in computer science. I loved algorithms and theory, but I also loved the low-level stuff: there was a time I could program an 8080 chip directly in hex because I knew the whole instruction set. Then, junior year, I took a class in game theory and the career I thought I was going to have turned on its head: I went to grad school to become an economist."
+        },
+        {
+          "type": "paragraph",
+          "text": "As it turned out, the rest of my career has basically lived at that intersection of computation and incentives. I was lucky that this intersection was exploding while I was a PhD student and young academic. Ad auctions, social networks, privacy, machine learning, calibration: suddenly a lot of these questions were becoming central to the internet. I was also lucky to learn from and work with incredible coauthors: @Aaroth, @mkearnsupenn, @mahersaid, @philippstrack85, and so many others not on X.",
+          "links": [
+            { "text": "@Aaroth", "href": "https://x.com/Aaroth" },
+            { "text": "@mkearnsupenn", "href": "https://x.com/mkearnsupenn" },
+            { "text": "@mahersaid", "href": "https://x.com/mahersaid" },
+            { "text": "@philippstrack85", "href": "https://x.com/philippstrack85" }
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Academia is a wonderful place. It gave me freedom to chase ideas, a taste for precision and some amazing colleagues. And tenure is an unbelievable privilege. Rice, in particular, gave me everything that you hope an institution will give you. I\u2019m deeply grateful for all that."
+        },
+        {
+          "type": "paragraph",
+          "text": "I had a few near-misses with leaving before. When I was finishing my PhD, I thought seriously about going straight to a lab. Later, around the end of my time at Penn, Preston McAfee convinced me to interview at Microsoft (great story for beers someday). But I didn\u2019t end up at any of these, I got tenure and eventually a chair at Rice, and the \u201cacademic lifer\u201d story seemed settled."
+        },
+        {
+          "type": "paragraph",
+          "text": "Then Covid happened."
+        },
+        {
+          "type": "paragraph",
+          "text": "Like a lot of people, I found myself doing things I normally wouldn\u2019t have done. Baking sourdough. Going down internet rabbit holes. Trading more than I used to, mostly to learn that I should not trade more than I used to. And a lot of people I trusted kept telling me about blockchains and DeFi."
+        },
+        {
+          "type": "paragraph",
+          "text": "So I started teaching blockchains and DeFi at Rice. Partly because students were hungry for new applications, and partly because teaching is the best forcing function I know for learning something properly."
+        },
+        {
+          "type": "paragraph",
+          "text": "As I learned about the space, I had the feeling of: oh, this is my stuff. The core problems were the problems I\u2019d spent my career thinking about: incentives, markets, mechanism design, but in an environment where there were all sorts of computational constraints. If blockchains were going to be the future of anything, this was going to be a full employment act for people like me."
+        },
+        {
+          "type": "paragraph",
+          "text": "A few consulting and advisory opportunities followed. At first, that seemed like the right balance: stay a professor, keep one foot in each world. But the deeper I got, the less honest that felt. The important questions were not questions you could answer well from the sidelines. Equally importantly, I couldn\u2019t do justice to Rice, my students, or my colleagues. So I went on leave."
+        },
+        {
+          "type": "paragraph",
+          "text": "At Tempo, I\u2019m learning a lot, very quickly. The team is absurdly good, and in many ways I feel like a grad student again: surrounded by people who know things I don\u2019t, trying to build taste in a new domain, getting corrected constantly, and enjoying it more than is probably healthy. The problems are not academic in the narrow sense, but they're challenging and a lot of fun. Also, the pace is very different, and I fell in love with that tempo (dad joke #2 for those of you keeping score at home)."
+        },
+        {
+          "type": "paragraph",
+          "text": "So I am pausing academia. But I\u2019m not leaving research, and I\u2019m not leaving the questions. I\u2019m just following them in a different arena."
+        }
+      ]
+    },
+    {
+      "slug": "waiting-for-berachain",
+      "title": "Waiting for Berachain",
+      "date": "January 30, 2025",
+      "excerpt": "A barren Discord channel. A single, flickering neon bear logo. Vlad and Gordie sit, refreshing their screens.",
+      "xUrl": "https://x.com/malleshpai/status/1885048565074190691",
+      "format": "play",
+      "blocks": [
+        { "type": "stage", "text": "(A barren Discord channel. A single, flickering neon bear logo. VLAD and GORDIE sit, refreshing their screens.)" },
+        { "type": "dialogue", "speaker": "VLAD", "text": "Nothing again." },
+        { "type": "dialogue", "speaker": "GORDIE", "text": "Nothing still." },
+        { "type": "dialogue", "speaker": "VLAD", "text": "Maybe today." },
+        { "type": "dialogue", "speaker": "GORDIE", "text": "Maybe tomorrow." },
+        { "type": "dialogue", "speaker": "VLAD", "text": "Maybe never." },
+        { "type": "dialogue", "speaker": "GORDIE", "text": "No, no. That\u2019s FUD. We must believe. Berachain will launch. It is known." },
+        { "type": "dialogue", "speaker": "VLAD", "text": "Is it?" },
+        { "type": "dialogue", "speaker": "GORDIE", "text": "I saw a tweet. The devs are building." },
+        { "type": "dialogue", "speaker": "VLAD", "text": "Ah yes, the devs. The devs who never appear. Like phantoms of the mempool." },
+        { "type": "dialogue", "speaker": "GORDIE", "text": "No, no, someone met a dev in Denver. Or maybe it was Taiwan. A trusted source." },
+        { "type": "dialogue", "speaker": "VLAD", "text": "A source? Who?" },
+        { "type": "dialogue", "speaker": "GORDIE", "text": "An anon with a penguin PFP." },
+        { "type": "dialogue", "speaker": "VLAD", "text": "Ah. Trustless indeed." },
+        { "type": "stage", "text": "(A long silence. They both refresh their screens again.)" },
+        { "type": "dialogue", "speaker": "VLAD", "text": "What if\u2026 we\u2019re the fools? What if Berachain is a mirage, like the great testnets of old? Ghost chains, haunting the ledgers of time?" },
+        { "type": "dialogue", "speaker": "GORDIE", "text": "No, no! There was an airdrop! Or at least the promise of an airdrop! And incentives! And honey! And pon\u2014" },
+        { "type": "dialogue", "speaker": "VLAD", "text": "Careful." },
+        { "type": "dialogue", "speaker": "GORDIE", "text": "(whispers) Tokenomics." },
+        { "type": "dialogue", "speaker": "VLAD", "text": "(nods solemnly) Tokenomics." },
+        { "type": "stage", "text": "(A pause.)" },
+        { "type": "dialogue", "speaker": "GORDIE", "text": "We should do something." },
+        { "type": "dialogue", "speaker": "VLAD", "text": "We are doing something." },
+        { "type": "dialogue", "speaker": "GORDIE", "text": "What are we doing?" },
+        { "type": "dialogue", "speaker": "VLAD", "text": "We are waiting." },
+        { "type": "dialogue", "speaker": "GORDIE", "text": "(sighs) We are waiting." },
+        { "type": "stage", "text": "(A RANDOM PASSERBY enters. He is tired, eyes sunken.)" },
+        { "type": "dialogue", "speaker": "PASSERBY", "text": "I was here once before. Like you, I waited." },
+        { "type": "dialogue", "speaker": "GORDIE", "text": "And? Did it launch?" },
+        { "type": "dialogue", "speaker": "PASSERBY", "text": "(shaking his head) I do not know. I left. I found Solana." },
+        { "type": "dialogue", "speaker": "VLAD", "text": "(gasps) You bridged?" },
+        { "type": "dialogue", "speaker": "PASSERBY", "text": "I did." },
+        { "type": "dialogue", "speaker": "GORDIE", "text": "And? How was it?" },
+        { "type": "dialogue", "speaker": "PASSERBY", "text": "(beat) It was fast. But I was empty inside." },
+        { "type": "stage", "text": "(He leaves. A long silence. They refresh again.)" },
+        { "type": "dialogue", "speaker": "VLAD", "text": "Do you think\u2026 Berachain will remember us?" },
+        { "type": "dialogue", "speaker": "GORDIE", "text": "Of course. We are VLAD and GORDIE. We have waited the longest." },
+        { "type": "dialogue", "speaker": "VLAD", "text": "Yes. Yes, we have." },
+        { "type": "stage", "text": "(They continue waiting. The screen flickers. The neon bear hums. The devs do not appear.)" }
+      ]
     }
+  ]
 }

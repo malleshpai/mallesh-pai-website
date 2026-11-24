@@ -1,38 +1,64 @@
-import { FileText } from 'lucide-react';
+import { FileText, ArrowUpRight } from "lucide-react";
 
 export default function CVPage() {
-    return (
-        <div className="max-w-4xl mx-auto py-8">
-            <h1 className="text-4xl font-serif font-bold text-[var(--color-nw-purple)] mb-8">Curriculum Vitae</h1>
-
-            {/* Google Scholar link */}
-            <p className="mb-6 text-slate-600">
-                Also see my <a href="http://scholar.google.com/citations?user=dHU6M_4AAAAJ" className="text-[var(--color-nw-purple)] underline decoration-1 underline-offset-4 hover:text-[var(--color-nw-purple-deep)]">Google Scholar Profile</a>.
-            </p>
-
-            {/* PDF Embed */}
-            <div className="bg-white border border-slate-200 rounded-lg overflow-hidden shadow-sm">
-                <object
-                    data="/MalleshPai-CV.pdf"
-                    type="application/pdf"
-                    width="100%"
-                    height="800"
-                    className="w-full"
-                >
-                    <div className="p-8 text-center">
-                        <FileText size={48} className="text-[var(--color-nw-purple-light)] mx-auto mb-4" />
-                        <p className="text-slate-600 mb-4">
-                            Your browser doesn't support embedded PDFs.
-                        </p>
-                        <a
-                            href="/MalleshPai-CV.pdf"
-                            className="text-[var(--color-nw-purple)] underline"
-                        >
-                            Click here to download the PDF
-                        </a>
-                    </div>
-                </object>
-            </div>
+  return (
+    <div className="py-10 md:py-14">
+      <header className="pb-8 border-b border-[var(--border)] flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <h1 className="font-serif text-4xl font-medium tracking-[-0.02em] text-[var(--ink)]">
+            Curriculum Vitae
+          </h1>
+          <p className="mt-3 text-[0.96rem] text-[var(--ink-body)]">
+            Also see my{" "}
+            <a
+              href="https://scholar.google.com/citations?user=dHU6M_4AAAAJ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="prose-link"
+            >
+              Google Scholar profile
+            </a>
+            .
+          </p>
         </div>
-    );
+
+        <a
+          href="/MalleshPai-CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 text-sm font-medium text-[var(--ink-muted)] hover:text-[var(--accent)] transition-colors self-start sm:self-auto"
+        >
+          <span>Open PDF in new tab</span>
+          <ArrowUpRight size={15} />
+        </a>
+      </header>
+
+      <div className="mt-8 bg-white border border-[var(--border)] rounded-xl overflow-hidden shadow-[0_8px_30px_-16px_rgba(22,22,20,0.1)]">
+        <object
+          data="/MalleshPai-CV.pdf"
+          type="application/pdf"
+          width="100%"
+          height="860"
+          className="w-full block"
+        >
+          <div className="p-12 text-center">
+            <FileText
+              size={40}
+              strokeWidth={1.5}
+              className="text-[var(--ink-muted)] mx-auto mb-4"
+            />
+            <p className="text-[var(--ink-body)] mb-4">
+              Your browser doesn&apos;t support embedded PDFs.
+            </p>
+            <a
+              href="/MalleshPai-CV.pdf"
+              className="prose-link text-sm font-medium"
+            >
+              Open the CV PDF directly
+            </a>
+          </div>
+        </object>
+      </div>
+    </div>
+  );
 }

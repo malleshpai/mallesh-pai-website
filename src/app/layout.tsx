@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -10,18 +10,26 @@ const inter = Inter({
   display: "swap",
 });
 
-const playfair = Playfair_Display({
+const newsreader = Newsreader({
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-newsreader",
+  style: ["normal", "italic"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Mallesh M. Pai | Tempo Labs",
-  description: "Personal website of Mallesh M. Pai, researcher at Tempo Labs.",
+  metadataBase: new URL("https://malleshpai.com"),
+  title: "Mallesh M. Pai",
+  description:
+    "Personal website of Mallesh M. Pai, researcher at Tempo Labs working on mechanism design, auction theory, blockchains, and decentralized finance.",
   icons: {
-    icon: "/profile.jpg",
-    apple: "/profile.jpg",
+    icon: "/icon.png",
+    apple: "/icon.png",
+  },
+  openGraph: {
+    title: "Mallesh M. Pai",
+    description: "Researcher at Tempo Labs.",
+    images: [{ url: "/profile.jpg", width: 1200, height: 1500, alt: "Mallesh M. Pai" }],
   },
 };
 
@@ -31,10 +39,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable} antialiased min-h-screen flex flex-col`}>
+    <html lang="en" className={`${inter.variable} ${newsreader.variable}`}>
+      <body className="min-h-screen flex flex-col bg-[var(--surface)] text-[var(--ink-body)]">
         <Navbar />
-        <main className="flex-grow container mx-auto px-4 py-8 max-w-4xl">
+        <main className="flex-1 w-full max-w-5xl mx-auto px-6 sm:px-8">
           {children}
         </main>
         <Footer />

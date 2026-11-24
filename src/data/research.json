@@ -3,56 +3,51 @@
     "category": "Working Papers",
     "papers": [
       {
-        "title": "Dynamic Incentives for Buy-Side Analysts",
-        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3310080",
-        "status": "Working Paper",
+        "title": "Volatility in Prediction Markets: A Structural Approach",
+        "url": "https://arxiv.org/abs/2607.08199",
+        "status": "Working Paper, July 2026.",
         "authors": [
           {
-            "name": "Rahul Deb",
-            "url": "https://www.economics.utoronto.ca/debrahul/"
+            "name": "Weiye Xi",
+            "url": null
           },
           {
-            "name": "Maher Said",
-            "url": "http://www.mahersaid.com"
-          }
-        ],
-        "links": [],
-        "abstract": "We develop a dynamic adverse selection model where a career-concerned buy-side analyst advises a fund manager about investment decisions. The analyst's ability is privately known, as is any information she learns over time. The manager wants to elicit information to maximize fund performance while also identifying and retaining high-skill analysts. We characterize the optimal dynamic contract, show that it has several features supported by empirical evidence, and derive novel testable implications. The fund manager's optimal contract both maximizes the value of information and screens out low-skill analysts by incentivizing the analyst to always provide honest advice."
-      },
-      {
-        "title": "How Informed Do You Want Your Principal To Be?",
-        "url": "https://www.economics.utoronto.ca/debrahul/files/InformedPrincipal.pdf",
-        "status": "(new)",
-        "authors": [
-          {
-            "name": "Rahul Deb",
-            "url": "https://www.economics.utoronto.ca/debrahul/"
+            "name": "Ciamac C. Moallemi",
+            "url": "https://moallemi.gsb.columbia.edu/"
           },
           {
-            "name": "Anne-Katrin Roesler",
-            "url": "https://sites.google.com/site/akroesler/"
+            "name": "Shouqiao Wang",
+            "url": null
           }
         ],
         "links": [],
-        "abstract": "We study a bilateral trade setting with interdependent values and two-sided private information. A buyer's value for a good depends on their private type and an unobserved quality of the good. The seller's cost similarly depends on both the buyer's type and the good's quality, which the seller learns about through a private signal. The core question is: how much (if any) private information would the buyer want the seller to have? We characterize the buyer-optimal outcome and demonstrate that there are conditions under which private information for the seller can lead to both greater profits and higher consumer surplus, suggesting that seller private information can result in Pareto gains compared to a situation where the seller is uninformed."
+        "abstract": "Forward-looking volatility forecasts are central inputs to derivatives pricing, market making, risk management, and volatility-linked trading strategies, with ARCH and GARCH models serving as the canonical workhorses. Such models are natural in standard asset markets, where prices are positive-valued stochastic processes and volatility is typically inferred from return dynamics. Prediction markets have a different structure: prices are bounded probabilities, payoffs are binary, and contracts resolve at known deadlines. We develop and estimate a volatility model tailored to binary prediction markets. The model combines two economic mechanisms: a Wright-Fisher deadline-resolution component, capturing how remaining binary uncertainty is forced to resolve over time, and a Glosten-Milgrom order-flow component, capturing volatility from informed trading as reflected in spreads and volume. Using a large panel of Kalshi contracts, we show that these structural variables carry substantial forecasting power. Plain ARCH/GARCH benchmarks are dominated by structural specifications; combining the structural model with residual GARCH dynamics gives the best overall forecasts. The model also provides an interpretable measurement framework: volatility is highest near fifty-fifty prices, rises near resolution, and varies across categories with the timing and discreteness of information arrival."
       },
       {
-        "title": "Dynamic Transaction Fee Mechanism Design",
-        "url": "https://arxiv.org/abs/2301.13406",
-        "status": "(new)",
+        "title": "Signaling Design",
+        "url": "https://arxiv.org/abs/2502.02328",
+        "status": "Working Paper, February 2025.",
         "authors": [
           {
-            "name": "Max Resnick",
-            "url": "https://www.linkedin.com/in/max-resnick"
+            "name": "Matteo Camboni",
+            "url": null
+          },
+          {
+            "name": "Mingzi Niu",
+            "url": "https://sites.google.com/view/mingziniu"
+          },
+          {
+            "name": "Rakesh Vohra",
+            "url": "https://sites.google.com/site/quaerereverum9/"
           }
         ],
         "links": [],
-        "abstract": ""
+        "abstract": "We revisit the classic job-market signaling model of Spence (1973), introducing profit-seeking schools as intermediaries that design the mapping from candidates' efforts to job-market signals. Each school commits to an attendance fee and a monitoring policy. We show that, in equilibrium, a monopolist school captures the entire social surplus by committing to low information signals and charging fees that extract students' surplus from being hired. In contrast, competition shifts surplus to students, with schools vying to attract high-ability students, enabling them to distinguish themselves from their lower-ability peers. However, this increased signal informativeness leads to more wasteful effort in equilibrium, contrasting with the usual argument that competition enhances social efficiency. This result may be reversed if schools face binding fee caps or students are credit-constrained."
       },
       {
         "title": "An Analysis of Intent-Based Markets",
         "url": "https://arxiv.org/abs/2403.02525",
-        "status": "(new)",
+        "status": "Working Paper, 2024.",
         "authors": [
           {
             "name": "Tarun Chitra",
@@ -69,6 +64,53 @@
         ],
         "links": [],
         "abstract": "Mechanisms for decentralized finance on blockchains suffer from various problems, including suboptimal price execution for users, latency, and a worse user experience compared to their centralized counterparts. Recently, off-chain marketplaces, colloquially called `intent markets,' have been proposed as a solution to these problems. In these markets, agents called solvers compete to satisfy user orders, which may include complicated user-specified conditions. We provide two formal models of solvers' strategic behavior: one probabilistic and another deterministic. In our first model, solvers initially pay upfront costs to enter a Dutch auction to fill the user's order and then exert congestive, costly effort to search for prices for the user. Our results show that the costs incurred by solvers result in restricted entry in the market. Further, in the presence of costly effort and congestion, our results counter-intuitively show that a planner who aims to maximize user welfare may actually prefer to restrict entry, resulting in limited oligopoly. We then introduce an alternative, optimization-based deterministic model which corroborates these results. We conclude with extensions of our model to other auctions within blockchains and non-cryptocurrency applications, such as the US SEC's Proposal 615."
+      },
+      {
+        "title": "Dynamic Transaction Fee Mechanism Design",
+        "url": "https://arxiv.org/abs/2301.13406",
+        "status": "Working Paper, 2023.",
+        "authors": [
+          {
+            "name": "Max Resnick",
+            "url": "https://www.linkedin.com/in/max-resnick"
+          }
+        ],
+        "links": [],
+        "abstract": ""
+      },
+      {
+        "title": "How Informed Do You Want Your Principal To Be?",
+        "url": "https://www.economics.utoronto.ca/debrahul/files/InformedPrincipal.pdf",
+        "status": "Working Paper.",
+        "authors": [
+          {
+            "name": "Rahul Deb",
+            "url": "https://www.economics.utoronto.ca/debrahul/"
+          },
+          {
+            "name": "Anne-Katrin Roesler",
+            "url": "https://sites.google.com/site/akroesler/"
+          }
+        ],
+        "links": [],
+        "abstract": "We study a bilateral trade setting with interdependent values and two-sided private information. A buyer's value for a good depends on their private type and an unobserved quality of the good. The seller's cost similarly depends on both the buyer's type and the good's quality, which the seller learns about through a private signal. The core question is: how much (if any) private information would the buyer want the seller to have? We characterize the buyer-optimal outcome and demonstrate that there are conditions under which private information for the seller can lead to both greater profits and higher consumer surplus, suggesting that seller private information can result in Pareto gains compared to a situation where the seller is uninformed."
+      },
+      {
+        "title": "Dynamic Incentives for Buy-Side Analysts",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3310080",
+        "status": "Working Paper.",
+        "authors": [
+          {
+            "name": "Rahul Deb",
+            "url": "https://www.economics.utoronto.ca/debrahul/"
+          },
+          {
+            "name": "Maher Said",
+            "url": "http://www.mahersaid.com"
+          }
+        ],
+        "links": [],
+        "abstract": "We develop a dynamic adverse selection model where a career-concerned buy-side analyst advises a fund manager about investment decisions. The analyst's ability is privately known, as is any information she learns over time. The manager wants to elicit information to maximize fund performance while also identifying and retaining high-skill analysts. We characterize the optimal dynamic contract, show that it has several features supported by empirical evidence, and derive novel testable implications. The fund manager's optimal contract both maximizes the value of information and screens out low-skill analysts by incentivizing the analyst to always provide honest advice."
       }
     ]
   },
@@ -76,9 +118,35 @@
     "category": "Papers in Refereed Journals",
     "papers": [
       {
+        "title": "Structural Estimation of MEV-Boost Auctions",
+        "url": "https://github.com/malleshpai/Structural-Estimation-of-MEV-Boost/blob/main/paper.pdf",
+        "status": "Journal of Mechanism and Institution Design, Forthcoming (Special Issue in Memory of Yinghua He).",
+        "authors": [
+          {
+            "name": "Tivas Gupta",
+            "url": null
+          },
+          {
+            "name": "Max Resnick",
+            "url": "https://www.linkedin.com/in/max-resnick"
+          },
+          {
+            "name": "Xun Tang",
+            "url": null
+          }
+        ],
+        "links": [
+          {
+            "text": "Code & Data",
+            "url": "https://github.com/malleshpai/Structural-Estimation-of-MEV-Boost"
+          }
+        ],
+        "abstract": "Roughly 90% of Ethereum blocks are built through MEV-Boost, an open English auction in which proposers sell block-building rights in real time; revenues since September 2022 total roughly $2.1 billion. We conduct a first formal econometric analysis of these auctions. We describe the market structure, assemble auction data from several sources, and estimate the distribution of bidders' values using methods from the structural empirical auctions literature. Integrated builders (affiliated with high-frequency trading firms) have systematically higher values than non-integrated builders and are more responsive to price volatility. These estimates enable counterfactual analysis of alternative auction formats, such as first-price sealed-bid auctions."
+      },
+      {
         "title": "Indirect Persuasion",
         "url": "https://doi.org/10.1086/739332",
-        "status": "Journal of Political Economy, Forthcoming (Accepted 2025).",
+        "status": "Journal of Political Economy, 134(4), April 2026, 1210\u20131244.",
         "authors": [
           {
             "name": "Rahul Deb",
@@ -285,7 +353,7 @@
             "url": "http://arxiv.org/abs/1402.2801"
           }
         ],
-        "abstract": "Joint work with Aaron Roth and Jonathan Ullman) We study infinitely repeated games in settings of imperfect monitoring. We first prove a family of theorems that show that when the signals observed by the players satisfy a condition known as (\u03f5,\u03b3)-differential privacy, that the folk theorem has little bite: for values of \u03f5 and \u03b3 sufficiently small, for a fixed discount factor, any equilibrium of the repeated game involve players playing approximate equilibria of the stage game in every period. Next, we argue that in large games (n player games in which unilateral deviations by single players have only a small impact on the utility of other players), many monitoring settings naturally lead to signals that satisfy (\u03f5,\u03b3)-differential privacy, for \u03f5 and \u03b3 tending to zero as the number of players n grows large. We conclude that in such settings, the set of equilibria of the repeated game collapse to the set of equilibria of the stage game."
+        "abstract": "We study infinitely repeated games in settings of imperfect monitoring. We first prove a family of theorems that show that when the signals observed by the players satisfy a condition known as (\u03f5,\u03b3)-differential privacy, that the folk theorem has little bite: for values of \u03f5 and \u03b3 sufficiently small, for a fixed discount factor, any equilibrium of the repeated game involve players playing approximate equilibria of the stage game in every period. Next, we argue that in large games (n player games in which unilateral deviations by single players have only a small impact on the utility of other players), many monitoring settings naturally lead to signals that satisfy (\u03f5,\u03b3)-differential privacy, for \u03f5 and \u03b3 tending to zero as the number of players n grows large. We conclude that in such settings, the set of equilibria of the repeated game collapse to the set of equilibria of the stage game."
       },
       {
         "title": "Social Learning with Costly Search",
@@ -303,7 +371,7 @@
             "url": "https://www.aeaweb.org/articles?id=10.1257/mic.20130253"
           }
         ],
-        "abstract": "Social Learning via Costly Search(Joint with Manuel Mueller-Frank) We study a sequential social learning model where agents privately acquire information by costly search. Search costs of agents are private, and are independently and identically distributed. We show that asymptotic learning occurs if and only if search costs are not bounded away from zero. We explicitly characterize equilibria for the case of two actions, and show that the probability of late moving agents taking the suboptimal action vanishes at a linear rate. Social welfare converges to the social optimum as the discount rate converges to one if and only if search costs are not bounded away from zero."
+        "abstract": "We study a sequential social learning model where agents privately acquire information by costly search. Search costs of agents are private, and are independently and identically distributed. We show that asymptotic learning occurs if and only if search costs are not bounded away from zero. We explicitly characterize equilibria for the case of two actions, and show that the probability of late moving agents taking the suboptimal action vanishes at a linear rate. Social welfare converges to the social optimum as the discount rate converges to one if and only if search costs are not bounded away from zero."
       },
       {
         "title": "The Geometry of Revealed Preference",
@@ -334,7 +402,7 @@
           }
         ],
         "links": [],
-        "abstract": "Optimal Auctions with Financially Constrained Buyers(Joint With Rakesh Vohra) We consider an environment where potential buyers for a unique indivisible good have liquidity constraints, in that they cannot pay more than their `budget' regardless of their valuation. A buyer's valuation for the good as well as her budget are her private information. We propose constrained-efficient and revenue maximizing auctions for this setting. In general, the optimal auction requires `pooling' in the middle despite the maintained assumption of a monotone hazard rate. Further, the auctioneer will never find it desirable to subsidize bidders with low budgets."
+        "abstract": "We consider an environment where potential buyers for a unique indivisible good have liquidity constraints, in that they cannot pay more than their `budget' regardless of their valuation. A buyer's valuation for the good as well as her budget are her private information. We propose constrained-efficient and revenue maximizing auctions for this setting. In general, the optimal auction requires `pooling' in the middle despite the maintained assumption of a monotone hazard rate. Further, the auctioneer will never find it desirable to subsidize bidders with low budgets."
       },
       {
         "title": "Coarse Decision Making and Overfitting",
@@ -373,6 +441,27 @@
     "category": "Papers in Refereed Conference Proceedings",
     "papers": [
       {
+        "title": "The Geography of (Concurrent) Block Proposing",
+        "url": "https://arxiv.org/abs/2610.18812",
+        "status": "Financial Cryptography (FC), 2027 (short paper).",
+        "authors": [
+          {
+            "name": "Ciamac C. Moallemi",
+            "url": "https://moallemi.gsb.columbia.edu/"
+          },
+          {
+            "name": "Dan Robinson",
+            "url": null
+          },
+          {
+            "name": "Christoph Schlegel",
+            "url": null
+          }
+        ],
+        "links": [],
+        "abstract": "The resilience and censorship resistance of a blockchain depend on where the validators and proposers of that blockchain physically operate. We study the economic incentives behind this location choice, both with a single proposer and with multiple concurrent proposers. Formally, we study a game where proposers first choose locations and then compete in a first-price auction for an opportunity whose common value is driven by information from geographically dispersed sources. A single proposer minimizes variance-weighted delay, locating at a weighted median of the sources and co-locating with any dominant one. By contrast, with two proposers, information both observe equally early earns no rent, and each proposer's expected profit is proportional to the standard deviation of the information it receives before its rival. We show that the location game admits the jointly unobserved variance as an ordinal potential, so global solutions of a weighted two-median problem are equilibria. With two sources, one proposer locates at each, however weak one is. With more proposers and at least as many sources, equilibrium locations are distinct under regular bidding. Multiple concurrent proposers thus do more than limit any single proposer's control over inclusion: by rewarding exclusive rather than shared information, they create an economic force toward geographic decentralization."
+      },
+      {
         "title": "Does Your Blockchain Need Multidimensional Transaction Fees?",
         "url": "https://arxiv.org/abs/2504.15438",
         "status": "Financial Cryptography (FC), 2026.",
@@ -400,7 +489,7 @@
         "authors": [
           {
             "name": "Ciamac C. Moallemi",
-            "url": null
+            "url": "https://moallemi.gsb.columbia.edu/"
           },
           {
             "name": "Dan Robinson",
@@ -430,6 +519,19 @@
         ],
         "links": [],
         "abstract": "This paper provides a comprehensive empirical analysis of the economics and dynamics behind arbitrages between centralized and decentralized exchanges (CEX-DEX) on Ethereum. We refine heuristics to identify arbitrage transactions from on-chain data and introduce a robust empirical framework to estimate arbitrage revenue without knowing traders' actual behaviors on CEX. Leveraging an extensive dataset spanning 19 months from August 2023 to March 2025, we estimate a total of 233.8M USD extracted by 19 major CEX-DEX searchers from 7,203,560 identified CEX-DEX arbitrages. Our analysis reveals increasing centralization trends as three searchers captured three-quarters of both volume and extracted value."
+      },
+      {
+        "title": "How Much Should You Pay for Restaking Security?",
+        "url": "https://arxiv.org/abs/2408.00928",
+        "status": "Conference on Web and Internet Economics (WINE), 2024.",
+        "authors": [
+          {
+            "name": "Tarun Chitra",
+            "url": null
+          }
+        ],
+        "links": [],
+        "abstract": "Restaking protocols aggregate pooled stake to secure multiple services simultaneously, raising the question of how much security a restaked service should purchase and how to structure token-based incentives. We expand game-theoretic models of restaking security to incorporate strategic node operators and attackers facing submodular profits across services, showing how incentive design can avoid large-scale cascading failures without excessive overcollateralization."
       },
       {
         "title": "Optimizing Exit Queues for Proof-of-Stake Blockchains: A Mechanism Design Approach",
@@ -485,7 +587,11 @@
         "authors": [
           {
             "name": "Max Resnick",
-            "url": "https://www.linkedin.com/in/max-resnick \u00ae\ufe0f [Elijah Fox](https://www.linkedin.com/in/elijah-fox-765a07174"
+            "url": "https://www.linkedin.com/in/max-resnick"
+          },
+          {
+            "name": "Elijah Fox",
+            "url": "https://www.linkedin.com/in/elijah-fox-765a07174"
           }
         ],
         "links": [],
@@ -845,7 +951,7 @@
           }
         ],
         "links": [],
-        "abstract": "Do Online Social Networks increase WelfareWe consider a strategic online social network that controls information flows between agents in a social learning setting. Agents on the network select among products of competing firms of unknown quality. The network sells advertising to firms. We consider display advertising, which is standard firm to consumer advertising, and social advertising, in which agents who purchased that firm's product are highlighted to their friends. We show that in equilibrium, information is unbiased relative to a setting with no advertising. However, the network reduces the information agents see about others\u2019 purchases, since this increases advertising revenue. Hence consumer welfare is lower than in the first best."
+        "abstract": "We consider a strategic online social network that controls information flows between agents in a social learning setting. Agents on the network select among products of competing firms of unknown quality. The network sells advertising to firms. We consider display advertising, which is standard firm to consumer advertising, and social advertising, in which agents who purchased that firm's product are highlighted to their friends. We show that in equilibrium, information is unbiased relative to a setting with no advertising. However, the network reduces the information agents see about others\u2019 purchases, since this increases advertising revenue. Hence consumer welfare is lower than in the first best."
       },
       {
         "title": "The Design of Affirmative Action Policy: A Mechanism Design Approach",

@@ -1,33 +1,69 @@
-import Link from 'next/link';
+import { promises as fs } from "fs";
+import path from "path";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 
-export default function PersonalPage() {
-    return (
-        <div className="max-w-3xl mx-auto">
-            <h1 className="text-4xl font-serif font-bold text-[var(--color-nw-purple)] mb-8">Personal</h1>
+interface PersonalArticle {
+  slug: string;
+  title: string;
+  eyebrow?: string;
+  date: string;
+  excerpt: string;
+  xUrl?: string;
+}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <Link href="/personal/my-father" className="group block bg-white border border-slate-100 p-8 rounded shadow-sm hover:shadow-md transition-all hover:border-[var(--color-nw-purple-light)]">
-                    <h2 className="text-2xl font-serif font-bold text-slate-800 group-hover:text-[var(--color-nw-purple)] mb-4 transition-colors">
-                        My Father
-                    </h2>
-                    <p className="text-slate-600 font-light leading-relaxed">
-                        A tribute to Panemangalore Madhavaraya Pai (1948 — 2025).
-                    </p>
-                    <span className="inline-block mt-4 text-sm font-medium text-[var(--color-nw-purple)] group-hover:underline decoration-1 underline-offset-4">
-                        Read Tribute &rarr;
-                    </span>
-                </Link>
+interface PersonalData {
+  personal: {
+    title: string;
+    content: string;
+  };
+  articles: PersonalArticle[];
+}
 
-                {/* Placeholder for future personal content */}
-                <div className="bg-slate-50 border border-slate-100 p-8 rounded relative opacity-75">
-                    <h2 className="text-2xl font-serif font-bold text-slate-400 mb-4">
-                        More
-                    </h2>
-                    <p className="text-slate-500 font-light leading-relaxed">
-                        Other personal writings and musings coming soon.
-                    </p>
-                </div>
-            </div>
-        </div>
-    );
+async function getPersonalData(): Promise<PersonalData> {
+  const filePath = path.join(process.cwd(), "src/data/personal.json");
+  const fileContents = await fs.readFile(filePath, "utf8");
+  return JSON.parse(fileContents);
+}
+
+export default async function PersonalPage() {
+  const data = await getPersonalData();
+
+  return (
+    <div className="py-10 md:py-14 max-w-2xl">
+      <header className="pb-8 border-b border-[var(--border)]">
+        <h1 className="font-serif text-4xl font-medium tracking-[-0.02em] text-[var(--ink)]">
+          Personal
+        </h1>
+        <p className="mt-3 text-[0.98rem] text-[var(--ink-body)] leading-relaxed">
+          {data.personal.content}
+        </p>
+      </header>
+
+      <div className="divide-y divide-[var(--border)]">
+        {data.articles.map((article) => (
+          <article key={article.slug} className="py-7">
+            <Link href={`/personal/${article.slug}`} className="group block">
+              <p className="text-xs font-medium uppercase tracking-[0.14em] text-[var(--ink-muted)] mb-2">
+                {article.date}
+              </p>
+              <h2 className="font-serif text-2xl sm:text-[1.65rem] font-medium text-[var(--ink)] group-hover:text-[var(--accent)] transition-colors leading-snug">
+                {article.title}
+              </h2>
+              <p className="mt-2.5 text-[0.96rem] leading-[1.75] text-[var(--ink-body)]">
+                {article.excerpt}
+              </p>
+              <span className="mt-3.5 inline-flex items-center gap-1.5 text-sm font-medium text-[var(--accent)]">
+                <span>Read</span>
+                <ArrowRight
+                  size={14}
+                  className="transition-transform group-hover:translate-x-0.5"
+                />
+              </span>
+            </Link>
+          </article>
+        ))}
+      </div>
+    </div>
+  );
 }

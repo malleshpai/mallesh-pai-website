@@ -1,69 +1,52 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --surface: #fcfcfb;
+  --surface-subtle: #f5f4f0;
+  --ink: #161614;
+  --ink-body: #3a3935;
+  --ink-muted: #6e6d68;
+  --border: #e8e6e1;
+  --accent: #4e2a84;
+  --accent-deep: #3b1e66;
+  --accent-soft: #f4f0fa;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--surface);
+  --color-foreground: var(--ink);
   --font-sans: var(--font-inter);
-  --font-serif: var(--font-playfair);
-
-  /* Northwestern Palette */
-  --color-nw-purple: #4E2A84;
-  --color-nw-purple-deep: #401F68;
-  --color-nw-purple-light: #B6ACD1;
-  --color-rich-black: #1a1a1a;
-  --color-off-white: #f8f9fa;
-  --color-slate-gray: #716C76;
-  /* Cool grey for secondary text */
+  --font-serif: var(--font-newsreader);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--color-off-white);
-  color: var(--color-rich-black);
-  font-family: var(--font-inter), sans-serif;
-  line-height: 1.8;
-  /* Increased from default */
+  background-color: var(--surface);
+  color: var(--ink-body);
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-playfair), serif;
-  font-weight: 500;
-  color: var(--color-nw-purple);
-  line-height: 1.3;
+::selection {
+  background-color: rgba(78, 42, 132, 0.14);
+  color: var(--ink);
 }
 
-a {
-  color: var(--color-nw-purple);
-  text-decoration: none;
-  transition: color 0.2s ease;
+.prose-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: #d4d1c9;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
 }
 
-a:hover {
-  color: var(--color-nw-purple-deep);
-}
-
-p {
-  margin-bottom: 1.5rem;
-}
-
-/* Utilities for elegance */
-.text-balance {
-  text-wrap: balance;
+.prose-link:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
 }
