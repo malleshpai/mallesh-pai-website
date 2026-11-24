@@ -21,14 +21,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.malleshmpai.com"),
   title: "Mallesh M. Pai",
   description:
-    "Personal website of Mallesh M. Pai, researcher at Tempo Labs working on mechanism design, auction theory, blockchains, and decentralized finance.",
+    "Personal website of Mallesh M. Pai, Chief Economist at Tempo Labs working on mechanism design, auction theory, blockchains, and decentralized finance.",
   icons: {
     icon: "/icon.png",
     apple: "/icon.png",
   },
   openGraph: {
     title: "Mallesh M. Pai",
-    description: "Researcher at Tempo Labs.",
+    description: "Chief Economist at Tempo Labs.",
     images: [{ url: "/profile.jpg", width: 1200, height: 1500, alt: "Mallesh M. Pai" }],
   },
 };

@@ -80,7 +80,7 @@ export default async function ResearchPage() {
           >
             here
           </a>
-          . A formal CV and research statement are available on the{" "}
+          . A formal CV is available on the{" "}
           <Link href="/cv" className="prose-link">
             CV page
           </Link>

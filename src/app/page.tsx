@@ -81,7 +81,7 @@ export default async function Home() {
       <section className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 items-center pb-14 md:pb-16">
         <div className="md:col-span-7 order-2 md:order-1">
           <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-[var(--ink-muted)] mb-3">
-            Tempo Labs &middot; Research
+            Tempo Labs &middot; Chief Economist
           </p>
 
           <h1 className="font-serif text-4xl sm:text-5xl font-medium tracking-[-0.025em] text-[var(--ink)] leading-[1.08]">
@@ -89,7 +89,7 @@ export default async function Home() {
           </h1>
 
           <p className="mt-5 text-[1.08rem] sm:text-[1.15rem] leading-[1.75] text-[var(--ink-body)] max-w-xl">
-            I am a researcher at{" "}
+            I am the Chief Economist at{" "}
             <a
               href="https://tempo.xyz/"
               target="_blank"
